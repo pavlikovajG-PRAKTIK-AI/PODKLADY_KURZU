@@ -1,6 +1,7 @@
 # Instalace skillu PRAKTIK-AI do Claude Code (karta Code v aplikaci Claude Desktop)
-# Spusteni: kliknete pravym na soubor -> Spustit v PowerShellu,
-#           nebo v PowerShellu:  powershell -ExecutionPolicy Bypass -File .\install_skills.ps1
+# Spusteni: dvojklik na Nainstalovat_skilly.cmd ve stejne slozce (funguje v libovolnem spravci souboru),
+#           nebo v Pruzkumniku klik pravym na tento soubor -> Spustit v PowerShellu,
+#           nebo primo v PowerShellu:  powershell -ExecutionPolicy Bypass -File .\install_skills.ps1
 # Skript zkopiruje slozky ze ..\skills\ do %USERPROFILE%\.claude\skills\ (existujici verze prepise).
 # Kdyz slozka skills chybi, rozbali zipy ze ..\zips\.
 
@@ -36,4 +37,4 @@ else {
 
 Write-Host ""
 Write-Host "Hotovo. V karte Code v Claude Desktop napiste /praktik (nebo /praktik-kurz, /praktik-rozhovor, /praktik-qa, /praktik-export)."
-Write-Host "Pokud mate Claude Code otevreny, restartujte relaci, aby se skilly nacetly."
+Write-Host "Claude Code slozku se skilly sleduje, novou verzi zachyti i v uz bezici relaci. Kdyz se skill nenabidne, otevrete novou relaci."

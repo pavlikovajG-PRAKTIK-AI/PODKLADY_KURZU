@@ -59,7 +59,7 @@ Po posledním modulu vygeneruj capstone (varianta A nebo B podle rozhodnutí aut
 
 ## Krok 4: předání
 
-Ulož celý kurz do `09_Kurzy/<Kód><Název>/<KOD>_<Nazev>_KURZ.md` (konvence v kánonu, sekce 9). Pak nabídni:
+Ulož celý kurz jako `<KOD>_<Nazev>_KURZ.md` do složky kurzu (konvence v kánonu, sekce 9). Když je jako Project folder otevřená přímo složka kurzu, ukládej do ní; když je otevřená `09_Kurzy`, použij nebo založ podsložku `<Kód><NázevBezMezer>`. Uvnitř už otevřené složky kurzu nikdy nezakládej další `09_Kurzy/`. Pak nabídni:
 - `praktik-qa` (kontrola vůči Definition of Done a formuláři oponenta),
 - `praktik-export` (docx pro autora, garanta a oponenta),
 - `av-materialy` (video, audio, grafiky).

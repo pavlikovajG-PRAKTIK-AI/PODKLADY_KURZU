@@ -93,7 +93,7 @@ Vyber 4–12 principů z NP-01 až NP-20 pro kurz, u každého modulu 2–5 s ur
 
 ## 9 Pojmenování souborů a umístění
 
-- Složka kurzu: `09_Kurzy/<Kód><NázevBezMezer>/`, např. `A0601VyvojDetskehoMozku/`.
+- Složka kurzu: `09_Kurzy/<Kód><NázevBezMezer>/`, např. `A0601VyvojDetskehoMozku/`. Cesta je uvedená vůči kořeni projektu; když už je složka kurzu otevřená jako pracovní, soubory patří přímo do ní.
 - Kurz: `<KOD>_<NazevBezDiakritiky>_KURZ.md`, export `<KOD>_<Nazev>_KURZ.docx` (výstupy projektu jsou vždy docx, ne PDF).
 - Rozhovor: `<KOD>_Rozhovor.md`. QA report: `<KOD>_QA_report.md`.
 - Mediální přílohy: `<KOD>-M<n>-<typ>-<popis>.<ext>` (svg, png, mp3, mp4).

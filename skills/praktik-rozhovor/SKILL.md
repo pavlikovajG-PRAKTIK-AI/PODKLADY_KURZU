@@ -42,7 +42,7 @@ Požádej autora o tři věci, pokud ještě nejsou v chatu: (1) tři autentick�
 ## 12 Co následuje (termíny: matrice do 2 dnů, varianty do 5 dnů, QA, oponentura, DoD)
 ```
 
-Ulož do složky kurzu `09_Kurzy/<Kód><Název>/`. Na závěr shrň autorovi ve třech větách, co vzniklo, a nabídni pokračování skillem `praktik-kurz`.
+Ulož do složky kurzu. Když je jako Project folder otevřená přímo složka kurzu, ukládej do ní; když je otevřená `09_Kurzy`, použij nebo založ podsložku `<Kód><NázevBezMezer>`. Uvnitř už otevřené složky kurzu nikdy nezakládej další `09_Kurzy/`. Na závěr shrň autorovi ve třech větách, co vzniklo, a nabídni pokračování skillem `praktik-kurz`.
 
 ## Pravidla
 

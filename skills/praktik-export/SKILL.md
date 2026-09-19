@@ -1,6 +1,6 @@
 ---
 name: praktik-export
-description: Exportuje hotový kurz PRAKTIK-AI (<KOD>_…_KURZ.md) do Wordu (.docx) v domácím stylu platformy – modrá záhlaví modulů #1F5C99, Arial 11, kurzivní závěry s modrým rámečkem, zápatí se zdrojem a dedikací TQ23000092. Použij, když autor chce „export do docx/Wordu“, „poslat oponentovi“, „vygenerovat dokument“, „udělej z toho Word“, nebo když praktik-qa skončí verdiktem „připraven k oponentuře“. Exportuje až po schválení obsahu; obsah nemění. Výstup projektu je vždy docx, nikdy PDF ani JSON.
+description: Exportuje hotový kurz PRAKTIK-AI (soubor KOD_Nazev_KURZ.md) do Wordu (.docx) v domácím stylu platformy – modrá záhlaví modulů #1F5C99, Arial 11, kurzivní závěry s modrým rámečkem, zápatí se zdrojem a dedikací TQ23000092. Použij, když autor chce „export do docx/Wordu“, „poslat oponentovi“, „vygenerovat dokument“, „udělej z toho Word“, nebo když praktik-qa skončí verdiktem „připraven k oponentuře“. Exportuje až po schválení obsahu; obsah nemění. Výstup projektu je vždy docx, nikdy PDF ani JSON.
 ---
 
 # praktik-export: docx z kurzu
@@ -10,7 +10,7 @@ Vstup je Markdown kurzu ve struktuře vzoru A0601 (sekce 1–12, moduly `# MODUL
 ## Postup
 
 1. Ověř, že soubor existuje a že autor obsah schválil (nebo že QA skončilo bez FAIL). Když ne, řekni to a nabídni `praktik-qa`.
-2. Spusť `python scripts/export_docx.py <cesta_k_md> [--out <cesta_docx>] [--zdroj "text do zápatí"]`. Skript potřebuje `python-docx` (`pip install python-docx`). Do `--zdroj` dej zdrojový materiál kurzu (článek, kapitola), jak ho uvádí autor.
+2. Spusť `python "${CLAUDE_SKILL_DIR}/scripts/export_docx.py" <cesta_k_md> [--out <cesta_docx>] [--zdroj "text do zápatí"]`. Cestu ke skriptu piš vždy takto absolutně: skript leží ve složce skillu (`%USERPROFILE%\.claude\skills\praktik-export\scripts\`), ne ve složce kurzu, kterou má autor otevřenou jako Project folder. Skript potřebuje `python-docx`; když ohlásí, že chybí, spusť `pip install python-docx` a export zopakuj. Do `--zdroj` dej zdrojový materiál kurzu (článek, kapitola), jak ho uvádí autor.
 3. Zkontroluj výsledek: počet modulů (modré pruhy), tabulky, kurzivní bloky, zápatí. Když skript selže, uveď chybu doslova; oprav vstupní Markdown, pokud chyba není ve skriptu.
 4. Pojmenování: `<KOD>_<Nazev>_KURZ.docx`, stejná složka jako `.md`. Předchozí verzi přepiš jen na výslovné přání, jinak přidej `_v2`.
 5. Nahlaš cestu a dvě čísla: počet modulů a počet zdrojů. Nic víc.

@@ -1,8 +1,8 @@
-# Skilly PRAKTIK-AI v aplikaci Claude Desktop: návod pro metodičky a metodiky
+# Skilly PRAKTIK-AI v kartě Code v Claude Desktop: návod pro metodičky a metodiky
 
-Verze 1.0 | 19. 9. 2026 | Projekt TQ23000092 PRAKTIK-AI
+Verze 1.4 | 19. 9. 2026 | Projekt TQ23000092 PRAKTIK-AI
 
-Skill je balíček instrukcí, který Claude načte, když ho potřebuje. Místo dlouhého promptu a hromady dokumentů v projektu máte pět malých skillů, které znají katalog kurzů, matrici v6, číselníky, vzorový kurz A0601 a Definition of Done. Nainstalujete je jednou, používáte v každém chatu.
+Skill je balíček instrukcí, který Claude načte, když ho potřebuje. Místo dlouhého promptu a hromady dokumentů v projektu máte pět malých skillů, které znají katalog kurzů, matrici v6, číselníky, vzorový kurz A0601 a Definition of Done. Nainstalujete je jednou, používáte v každém kurzu.
 
 | Skill | Co dělá | Kdy ho zavoláte |
 |---|---|---|
@@ -14,34 +14,28 @@ Skill je balíček instrukcí, který Claude načte, když ho potřebuje. Místo
 
 ## Co potřebujete
 
-- Aplikaci Claude Desktop (Windows nebo Mac) a účet, který má zapnuté skilly (Pro, Max, Team nebo Enterprise).
-- Soubory ze složky **09_Kurzy/PODKLADY_KURZU** na sdíleném Disku: podsložka `zips` (pět souborů .zip) a podsložka `skills` (rozbalené skilly).
+- Aplikaci Claude Desktop s kartou **Code** a placený tarif Claude (Pro, Max, Team nebo Enterprise). Skilly v kartě Code žádný přepínač v nastavení nepotřebují; stačí, že jejich složky leží na disku.
+- Nainstalovaný **Python** s balíčkem `python-docx` (`pip install python-docx`). Potřebuje ho jen export do Wordu.
+- Celou složku **09_Kurzy/PODKLADY_KURZU** zkopírovanou z Disku na svůj počítač.
 
-## Cesta A: chat v Claude Desktop (doporučeno pro většinu práce)
+Pracujeme výhradně v kartě Code: Claude tam čte a upravuje soubory přímo ve složce kurzu na vašem počítači, kurz vzniká rovnou jako soubor a nemusíte nic ručně stahovat ani nahrávat.
 
-1. Otevřete Claude Desktop a přihlaste se.
-2. Klikněte vlevo dole na své jméno nebo iniciály a zvolte **Settings** (Nastavení).
-3. Otevřete kartu **Capabilities** (Funkce). Zapněte přepínač **Code execution and file creation** (Spouštění kódu a vytváření souborů). Bez něj se skilly nenabídnou.
-4. Na stejné kartě sjeďte k části **Skills**. Klikněte na **Upload skill** (Nahrát skill) a vyberte soubor `praktik.zip` ze složky `zips`.
-5. Krok 4 zopakujte pro `praktik-rozhovor.zip`, `praktik-kurz.zip`, `praktik-qa.zip` a `praktik-export.zip`.
-6. Zkontrolujte, že v seznamu Skills vidíte všech pět skillů a že mají zapnutý přepínač.
-7. Otevřete nový chat. Přiložte zdrojový text (PDF článku, kapitola) a napište například:
+## Instalace skillů (uděláte jednou)
+
+1. Zkopírujte si složku **PODKLADY_KURZU** z Disku na svůj počítač.
+2. Ve složce `scripts` dvakrát klikněte na `Nainstalovat_skilly.cmd`. Funguje to v Průzkumníku i v jiných správcích souborů (např. Total Commander), kde volba „Spustit v PowerShellu“ v kontextovém menu chybí. Skript zkopíruje skilly do `C:\Users\<vaše jméno>\.claude\skills\`. Na Macu skilly nainstalujte ručně: zkopírujte složky ze `skills` do `~/.claude/skills/`.
+3. Hotovo. Claude Code složku se skilly sleduje a novou i změněnou verzi zachytí i v už běžící relaci; restartovat nemusíte. Když se skill přesto nenabídne, otevřete novou relaci.
+
+## Práce s kurzem
+
+1. V Claude Desktop otevřete kartu **Code**. Ještě před odesláním první zprávy nastavte v řádku promptu **Project folder** a vyberte složku kurzu (například `09_Kurzy/C0105LiteraturaRozhovorSAutorem`). Když složka kurzu ještě neexistuje, vyberte `09_Kurzy` a nechte ji Clauda založit podle konvence `<Kód><NázevBezMezer>`. Ve stejném řádku se nastavuje prostředí, model a režim oprávnění.
+2. Vybraná složka je Claudův pracovní prostor: soubory kurzu v ní vznikají a upravují se rovnou. Na cokoli mimo ni se Claude ptá na svolení, takže se sám nedostane ke zbytku disku.
+3. Do řádku napište zadání a přiložte zdrojový text jako soubor (PDF článku, kapitola), například:
 
    > Použij skill praktik-kurz. Kurz C1.5 Literatura: interpretace, rozhovor s autorem a jeho limity. Cílová skupina učitelé ČJ na SŠ. Tři situace z praxe: …
 
-   Claude načte skill a začne kostrou kurzu. Když skill nezmíníte, Claude ho zpravidla vybere sám podle zadání. Když ne, napište jeho název do zprávy.
-8. Hotový text kurzu si nechte uložit jako soubor a stáhněte ho. Pro Word napište „exportuj do docx“; Claude použije skill praktik-export.
-
-Volitelně si založte projekt **PRAKTIK-AI kurzy**: do pole Project instructions vložte obsah souboru `Projektove_instrukce_v2.md`. Do znalostí projektu nenahrávejte matrici ani kurikulum, skilly je už obsahují. Zdrojové články přikládejte do jednotlivých chatů, ne do znalostí projektu.
-
-## Cesta B: karta Code v Claude Desktop (pro práci se soubory na disku)
-
-Hodí se, když chcete, aby kurz vznikal rovnou ve složce `09_Kurzy` a aby Claude četl a upravoval soubory na vašem počítači.
-
-1. Zkopírujte si složku **PODKLADY_KURZU** z Disku na svůj počítač.
-2. Ve složce `scripts` klikněte pravým tlačítkem na `install_skills.ps1` a zvolte **Spustit v PowerShellu**. Skript zkopíruje skilly do `C:\Users\<vaše jméno>\.claude\skills\`. Na Macu zkopírujte složky ze `skills` ručně do `~/.claude/skills/`.
-3. V Claude Desktop otevřete kartu **Code**, klikněte na **Open folder** a vyberte složku kurzu (například `09_Kurzy/C0105LiteraturaRozhovorSAutorem`).
-4. Do řádku napište `/praktik` a zadání. Skill se spustí, kurz vzniká jako soubor `<KOD>_<Nazev>_KURZ.md` ve zvolené složce, Word vedle něj.
+   Claude načte skill a začne kostrou kurzu. Když skill nezmíníte, Claude ho zpravidla vybere sám podle zadání; když ne, napište jeho název do zprávy (nebo rovnou `/praktik`). Kurz vzniká jako soubor `<KOD>_<Nazev>_KURZ.md` ve zvolené složce.
+4. Pro Word napište „exportuj do docx“; Claude použije skill praktik-export a soubor uloží vedle `.md`.
 
 ## Jak s Claudem pracovat, aby to šetřilo čas i tokeny
 
@@ -53,16 +47,18 @@ Hodí se, když chcete, aby kurz vznikal rovnou ve složce `09_Kurzy` a aby Clau
 
 ## Aktualizace skillů
 
-Když se skilly změní, dostanete nové zipy. V Settings → Capabilities → Skills starý skill smažte a nahrajte nový. Na kartě Code stačí znovu spustit `install_skills.ps1`.
+Když se skilly změní, dostanete novou složku `PODKLADY_KURZU` (nebo jen podsložku `skills`). Nahraďte jí tu starou u sebe na počítači a ve složce `scripts` znovu spusťte `Nainstalovat_skilly.cmd` — přepíše starou verzi novou. Nová verze platí hned, i v otevřené relaci.
 
 ## Když něco nefunguje
 
 | Potíž | Řešení |
 |---|---|
-| Tlačítko Upload skill nevidím | Zapněte Code execution and file creation; ověřte, že váš tarif skilly podporuje |
-| Nahrání zipu selže | Zip musí obsahovat složku se souborem `SKILL.md`; použijte zipy ze složky `zips`, nebalte je znovu |
+| Kartu Code v Claude Desktop nevidím | Ověřte, že máte placený tarif (Pro, Max, Team nebo Enterprise) a aktuální verzi aplikace |
+| `install_skills.ps1` / `Nainstalovat_skilly.cmd` se nespustí | Zkuste druhý ze souborů — `.cmd` funguje dvojklikem v libovolném správci souborů, `.ps1` jen v Průzkumníku přes „Spustit v PowerShellu“ |
+| Na kartě Code `/praktik` nic nenabízí | Zkontrolujte, že existuje soubor `C:\Users\<jméno>\.claude\skills\praktik\SKILL.md`; když existuje, otevřete novou relaci |
+| V Settings → Skills vidím jen některé skilly | Ten seznam ukazuje skilly nahrané do účtu Claude (pro chat), ne složku na disku, ze které čte karta Code. Instalaci ověřte v kartě Code: napište / a v nabídce musí být všech pět praktik* |
 | Claude skill nepoužil | Napište název skillu do zprávy („použij skill praktik-kurz“) |
-| Kurz vzniká v jiné struktuře než A0601 | Skill nebyl načten; ověřte, že je v seznamu zapnutý, a začněte nový chat |
-| Na kartě Code `/praktik` nic nenabízí | Zkontrolujte složku `C:\Users\<jméno>\.claude\skills\praktik\SKILL.md`, restartujte relaci |
+| Kurz vzniká v jiné struktuře než A0601 | Skill nebyl načten; ověřte, že soubory jsou v `C:\Users\<jméno>\.claude\skills\`, a začněte novou relaci |
+| Export do docx skončí hláškou „Chybí python-docx“ | Nechte Clauda spustit `pip install python-docx` a export zopakujte |
 
-Kontakt: Jana Pavlíková, jana.pavlikova@ujep.cz. Zdrojové soubory skillů a tento návod jsou v repozitáři PODKLADY_KURZU a ve složce 09_Kurzy/PODKLADY_KURZU na Disku.
+Kontakt: Jana Pavlíková, jana.pavlikova@ujep.cz. Zdrojové soubory skillů a tento návod jsou ve složce 09_Kurzy/PODKLADY_KURZU na sdíleném Disku.

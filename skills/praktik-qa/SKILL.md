@@ -1,6 +1,6 @@
 ---
 name: praktik-qa
-description: Zkontroluje hotový nebo rozpracovaný kurz PRAKTIK-AI (soubor <KOD>_…_KURZ.md) proti Definition of Done, deseti kritériím oponentního posudku, systémovým pravidlům a kánonu (terminologie, časy, F4 v každém modulu, dialogické formáty, vykání, jména a obory v příkladech, zdroje, KRAUU mimo texty pro uživatele) a vydá QA report s označenými místy k opravě. Použij, když autor chce „zkontrolovat kurz“, „projít Definition of Done“, „oponenturu nanečisto“, „co je špatně“, „připravit kurz na oponenta“, nebo před exportem.
+description: Zkontroluje hotový nebo rozpracovaný kurz PRAKTIK-AI (soubor KOD_Nazev_KURZ.md) proti Definition of Done, deseti kritériím oponentního posudku, systémovým pravidlům a kánonu (terminologie, časy, F4 v každém modulu, dialogické formáty, vykání, jména a obory v příkladech, zdroje, KRAUU mimo texty pro uživatele) a vydá QA report s označenými místy k opravě. Použij, když autor chce „zkontrolovat kurz“, „projít Definition of Done“, „oponenturu nanečisto“, „co je špatně“, „připravit kurz na oponenta“, nebo před exportem.
 ---
 
 # praktik-qa: kontrola kvality kurzu
