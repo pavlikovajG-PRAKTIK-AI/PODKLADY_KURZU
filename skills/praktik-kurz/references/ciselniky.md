@@ -8,7 +8,6 @@ V kurzu vyber 4–12 principů, u každého modulu uveď 2–5 kódů s fází, 
 
 | Kód | Princip | EN | Popis | Příklad využití při učení s AI |
 |---|---|---|---|---|
-| Kód | Princip (CZ) | Princip (EN) | Stručný popis | Příklad využití při učení s AI |
 | NP-01 | Neuroplasticita | Neuroplasticity | Schopnost mozku přetvářet synaptické spoje na základě zkušenosti; opakované učení doslova mění strukturu nervových sítí. | Pravidelné dialogy s AI nad jedním tématem (např. denní debata o ML konceptech) postupně utvářejí stabilní expertní okruhy. |
 | NP-02 | Distribuované opakování | Spaced Repetition | Učení rozložené v čase vede k trvalejšímu zapamatování než nárazové studium díky opakovanému přepisování paměťové stopy. | AI plánuje Anki-styl připomínky (1 den, 3 dny, 7 dní, 21 dní) na klíčové pojmy z předchozí konverzace. |
 | NP-03 | Aktivní vybavování | Active Recall / Retrieval Practice | Vědomé vybavování informace z paměti posiluje paměťovou stopu výrazně více než pasivní opětovné čtení. | AI nevykládá rovnou odpověď, ale vede uživatele sokratovskými otázkami: „Co si myslíš, že se stane, když…? |
@@ -36,7 +35,6 @@ Výchozí volba pro F2 je dialogický formát (FMT-SOK, FMT-VLA, FMT-PRO, FMT-OT
 
 | Kód | Kategorie | Název | Popis | Role AI | Náročnost IT |
 |---|---|---|---|---|---|
-| Kód | Kategorie | Název formátu | Popis | Role AI | Náročnost IT |
 | FMT-MCQ | Uzavřený | Multiple choice | Výběr z možností; testuje faktografii a porozumění konceptům. | Generátor + hodnotitel | Nízká |
 | FMT-TF | Uzavřený | True / false | Pravda / nepravda; rychlé ověření klíčových tvrzení. | Generátor + hodnotitel | Nízká |
 | FMT-MTC | Uzavřený | Matching | Párování pojmů s definicemi nebo příklady. | Generátor + hodnotitel | Nízká |
@@ -57,7 +55,6 @@ Interní mapování, uživateli se nezobrazuje. Kurz mapuje 3–8 kompetencí.
 
 | Kód | Oblast | Kompetence | Popis |
 |---|---|---|---|
-| Kód | Oblast | Kompetence | Popis |
 | 1.1 | 1 Obsah a didaktika | Rozumí vyučovaným oborům a dále se v nich rozvíjí | Učitel/ka rozumí oborům, které vyučuje, a systematicky se v nich rozvíjí. |
 | 1.2 | 1 Obsah a didaktika | Didakticky zprostředkovává obsah žákům | Zprostředkovává obsah žákům v souladu s jejich vzdělávacími potřebami. |
 | 2.1 | 2 Plánování, vedení a reflexe výuky | Nastavuje cíle výuky | Stanovuje srozumitelné cíle a vede k jejich nastavování i žáky a žákyně. |
@@ -81,7 +78,6 @@ Interní mapování, uživateli se nezobrazuje. Kurz mapuje 3–8 kompetencí.
 
 | Úroveň | Název | Slovesa |
 |---|---|---|
-| Úroveň | Název | Typická slovesa pro GOALS a OBJECTIVES |
 | 1 | Zapamatovat | vyjmenuje, popíše, identifikuje, rozpozná, zopakuje |
 | 2 | Porozumět | vysvětlí, shrne, klasifikuje, interpretuje, přeloží |
 | 3 | Aplikovat | použije, provede, řeší, demonstruje, implementuje |
