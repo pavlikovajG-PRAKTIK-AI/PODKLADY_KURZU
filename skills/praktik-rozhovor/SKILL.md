@@ -20,6 +20,7 @@ Požádej autora o tři věci, pokud ještě nejsou v chatu: (1) tři autentick�
 
 - Ptej se po 2–3 otázkách najednou, v pořadí protokolu, konverzačně. U každé otázky měj po ruce „proč se ptáme“ pro případ, že autor váhá.
 - Odpovědi ihned parafrázuj do jazyka matrice: řešený problém jednou větou, GOALS slovesy 3. os. sg. podle Blooma, artefakt s kritériem hotovosti.
+- U otázky 2 rozpadni artefakt na sekce hned u stolu. Sekcí je tolik co modulů + 1 úvodní z capstone (5 modulů = 6 sekcí) a každá vzniká v právě jednom F4. Když autor vyjmenuje víc částí, nabídni sloučení a nech ho vybrat, která k sobě patří; sloučené položky zapiš do sloupce „co obsahuje“, ať se nic neztratí. Počet modulů ještě neznáš přesně — vrať se k tabulce po otázce 7 a dolaď ji.
 - U otázky 4 (tři příklady) vytáhni z každé situace: co se stalo, co udělal učitel, co by udělala AI, kde je to dobře a kde špatně. Tyto příklady jsou jádrem modulů a testových položek, ber je doslova, nevylepšuj je.
 - U otázky 6 zapisuj antipatterny přímo do tabulky MUSÍ / NESMÍ.
 - U otázky 9 si nech říct „větu, kterou byste v kurzu nikdy nenapsali“ a zapiš ji do stylu jako zákaz.
@@ -36,7 +37,8 @@ Požádej autora o tři věci, pokud ještě nejsou v chatu: (1) tři autentick�
 ## 5 Tři autentické situace (doslovný zápis + rozbor: učitel / AI / dobře / špatně)
 ## 6 Specifikum AI a antipatterny (MUSÍ / NESMÍ)
 ## 7 Styl a tón (+ zakázané věty)       ## 8 Kontrolní body a rizika halucinace
-## 9 Artefakt (co obsahuje, jak pozná hotovo, portfolio / databáze S) + návrh 5 kritérií rubriky
+## 9 Artefakt (co obsahuje, jak pozná hotovo, portfolio / databáze S)
+##   + tabulka sekcí: # | sekce | co obsahuje | vzniká v (M?/F4 nebo Capstone) + návrh 5 kritérií rubriky
 ## 10 Výzkum (jak poznáme za půl roku, že funguje; data z platformy)
 ## 11 Rozhodnutí (tabulka z protokolu)
 ## 12 Co následuje (termíny: matrice do 2 dnů, varianty do 5 dnů, QA, oponentura, DoD)

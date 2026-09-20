@@ -31,7 +31,7 @@ Výstup je `<KOD>_QA_report.md` ve složce kurzu a stručné shrnutí v chatu. K
 - OBJECTIVES: ID `<KOD>-Onn` unikátní, každý modul má 1–3, každá vazba na existující GOAL.
 - Každý modul má: název, IMPULS, F1, F2 s kódem FMT, F3 s kódem FMT, F4 se sekcí artefaktu, NP kódy s fází. Součet minut fází = délka modulu; F1 ≤ 5 min; modul ≤ 30 min (cílově 15–20).
 - Délka celkem = součet modulů + capstone a odpovídá formátu (kurz 60–105, mikrokurz 30–45, pilot ZŠ 120).
-- Capstone má variantu A nebo B. Sekce 9 ARTEFAKT má šablonu sekcí a každá sekce má „vzniká v M?/F4“ nebo Capstone; počet sekcí odpovídá F4 modulů.
+- Capstone má variantu A nebo B. Sekce 9 ARTEFAKT má šablonu sekcí a každá sekce má právě jedno „vzniká v“ — `M?/F4`, nebo `Capstone`. Počet sekcí = počet modulů + 1 úvodní sekce z capstone (5 modulů = 6 sekcí, jako ve vzoru A0601). Sekce, která by vznikala ve dvou modulech, je chyba: rozděl ji, nebo obě části slouč do jedné sekce jednoho F4.
 - Rubrika: max. 5 kritérií, závazné názvy úrovní, váhy dávají 100 %, práh badge 75 %, routing silný / slabý / mezera.
 - Zdroje: sekce existuje, má datum ověření, každý zdroj má DOI nebo URL; každé jméno autora citované v F1 je v seznamu.
 - Žádný placeholder („doplňte“, „…“, „TBD“, „lorem“).

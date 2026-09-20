@@ -36,7 +36,8 @@ V textech pro uživatele pište „Modul 1“ celým slovem; kódy M1–M5 a F1�
 7 KRAUU kompetence (interní)                8 Vzory a antipatterns pro agenta
 MODUL 1–5: hlavička · IMPULS · F1 · F2 · F3 · F4
 CAPSTONE (A nebo B)
-9 ARTEFAKT (definice + šablona povinných sekcí, každá sekce vzniká v konkrétním F4)
+9 ARTEFAKT (definice + šablona povinných sekcí; každá sekce vzniká v právě jednom F4, nikdy
+  ve dvou; sekcí = modulů + 1 úvodní sekce z capstone)
 11 RUBRIKA 5 × 5 (závazné názvy úrovní, váhy, práh badge 75 %, routing)
 12 Výzkumná poznámka
 Procvičovací test (volitelný) · Závěrečný test (finální ověření, práh 75 %)

@@ -33,7 +33,7 @@ Napiš do chatu a ulož jako `<KOD>_<Nazev>_KURZ.md` pouze:
 1. Hlavičku a sekci 1 IDENTIFIKACE včetně anchor textu, informační noty a textu certifikátu.
 2. GOALS (3–4, Bloom 2 až 6, poslední vždy „Tvořit“ a míří na artefakt).
 3. OBJECTIVES (1–3 na modul, ID `<KOD>-Onn`, typ, testovatelnost, vazba).
-4. Blueprint artefaktu: tabulka povinných sekcí a v kterém F4 vznikají. Součet sekcí = počet modulů + úvod v capstone.
+4. Blueprint artefaktu: tabulka povinných sekcí a v kterém F4 vznikají. Součet sekcí = počet modulů + úvod v capstone; každá sekce vzniká v právě jednom F4. Když zadání z rozhovoru obsahuje víc položek, neslučuj je sám: napiš návrh sloučení do kostry a nech autora rozhodnout.
 5. Názvy modulů, IMPULSY a plán formátů (F2 dialogický formát, F3 formáty, F4 sekce) v jedné tabulce.
 6. Globální výběr NP, AI principů a KRAUU; návrh 4–8 vzorů a antipatternů pro agenta.
 7. Seznam zdrojů, které ze zdrojového textu použiješ, a co v něm chybí (nutno dohledat).
