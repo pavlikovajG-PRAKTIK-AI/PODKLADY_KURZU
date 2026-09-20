@@ -71,7 +71,7 @@ Vyber 4–12 principů z NP-01 až NP-20 pro kurz, u každého modulu 2–5 s ur
 - Jména v příkladech česká, v jednom kurzu střídat; zakázána cizí jména (zejména Natalia). Obory v příkladech humanitní (dějepis, psychologie, pedagogika, filozofie, sociologie, čeština, dějiny umění, etika), střídat; zakázány právo, biologie, ekonomie, medicína, informatika, obchodní komunikace, pokud nejde o oborový kurz daného předmětu.
 - Anchor text: konkrétní problém, přímý, trochu provokativní, bez floskulí. Nikdy „V tomto kurzu se naučíte…“.
 - Názvy modulů akční a konkrétní: „Proč X nestačí“, ne „Úvod do X“.
-- Žádný AI balast: žádné „Skvělá otázka“, „V dnešní době“, „Je důležité si uvědomit“, žádné nadšené úvody. Žádné katastrofické ani bagatelizující formulace o AI.
+- Žádný AI balast a žádná zakázaná věta: řiď se oddílem 6 „Věty, které nikdy nezazní“ v `systemova_pravidla.md` (osm skupin: prázdné smíření, strašení, marketing, věty odnaučované samotným kurzem, rozpor se směrnicí, didaktické prázdno, balast, falešná blízkost). Na každou napsanou větu použij tři testy z oddílu 6.9: zaměnitelnost, vlastní pravidlo, doložitelnost.
 - Jedna metafora na koncept, metafora doprovází termín, nikdy ho nenahrazuje; návratové schéma kurzu (NP-20).
 - Neexplicitní KRAUU: kódy kompetencí nikdy v textu pro uživatele.
 

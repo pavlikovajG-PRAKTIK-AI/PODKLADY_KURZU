@@ -47,7 +47,8 @@ Projdi 9 bodů DoD. U bodů, které nelze ověřit z textu (oponentura, zápis v
 - Vykání všude (hledej tykání: „tvůj“, „zkus“, „ti“, „tě“). Terminologie jen kanonická (hledej „výsledky učení“, „VL“, „kvíz“ mimo F3, „aktivita“, „vstupní hák“, „M1“ v uživatelském textu).
 - Jména v příkladech česká a střídaná; žádná Natalia. Obory v příkladech humanitní, žádné právo, biologie, ekonomie, medicína, informatika, obchodní komunikace (výjimka: oborový kurz daného předmětu).
 - Žádné KRAUU kódy mimo sekci 7. Anchor text pojmenovává problém, není příslib („naučíte se“).
-- AI balast: hledej „Skvělá“, „V dnešní době“, „Je důležité si uvědomit“, „Pojďme se podívat“, „revoluční“, „nesmírně“. Katastrofické nebo bagatelizující věty o AI = WARN.
+- **Zakázané věty (oddíl 6 `systemova_pravidla.md`)**: projdi všech osm skupin. Nález ze skupiny 6.4 (věty, které kurz sám odnaučuje) nebo 6.5 (rozpor se směrnicí a s doklady) = FAIL, ostatní skupiny = WARN. Hledej mimo jiné: „Skvělá“, „V dnešní době“, „Je důležité si uvědomit“, „Pojďme se podívat“, „revoluční“, „nesmírně“, „je tu a nikam nezmizí“, „jen nástroj“, „není otázka zda“, „stačí se správně zeptat“, „vezme vám práci“, „o krok napřed“, „detektor“, „poškozuje mozek“, „seznámíte se“, „si povíme“, „nebojte se“, „jednodušší, než si myslíte“, „zvládne to každý“.
+- Na sporné věty použij tři testy z oddílu 6.9 (zaměnitelnost, vlastní pravidlo, doložitelnost) a v reportu uveď, který test věta neprošla.
 - Kalibrace jistoty: u preprintů a sporných efektů je v F1 poznámka o síle evidence. Komerční produkty se nedoporučují jménem.
 - Pravidla používání AI pro účastníky existují (co smí, co ne, jak deklarovat). Dedikace TQ23000092 přítomna.
 - Přístupnost: každá zmíněná grafika má popis nebo alt text; kurz je průchozí bez zvuku a videa.

@@ -12,6 +12,7 @@ Cíl: z podkladů autora vznikne kurz, který projde kontrolou `praktik-qa` bez 
 | Soubor | Kdy ho otevřít |
 |---|---|
 | `references/kanon.md` | vždy na začátku (terminologie, struktura, časy, styl, zdroje, pojmenování) |
+| `references/systemova_pravidla.md` | vždy před psaním textu pro uživatele — oddíl 6 „Věty, které nikdy nezazní“ je zakazovací a platí pro všechny kurzy |
 | `references/katalog_kurzu.md` | jen řádek zadaného kurzu a jeho prerekvizit (hledej podle kódu), plus vlnu |
 | `references/ciselniky.md` | při výběru NP, FMT, KRAUU, typu artefaktu; tabulku otevři, kód opiš |
 | `references/sablona_kurzu.md` | před psaním kostry |
