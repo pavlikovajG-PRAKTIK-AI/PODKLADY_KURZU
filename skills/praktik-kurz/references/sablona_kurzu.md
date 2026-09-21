@@ -14,6 +14,19 @@ Verze 1.0 | D. M. RRRR | Autor podkladu: Jméno Příjmení (e-mail)
 
 ---
 
+## ANOTACE (pro založení kurzu na platformě)
+
+*Nejvýše 500 znaků. Pravidla v `systemova_pravidla.md`, oddíl 7: bez kódu, názvu, délky, počtu modulů, druhé osoby, sloganu a příslibů. Po dokončení kurzu se vypisuje i do chatu.*
+
+```
+Vstupní kurz pro [koho] a [co ten člověk chce zvládnout]. Témata: [4–6 témat oddělených čárkami].
+Výstupy: [artefakt] — dokument s [výčtem toho, co obsahuje].
+```
+
+*(xxx znaků)*
+
+---
+
 ## 1 IDENTIFIKACE
 
 | Klíč | Hodnota |

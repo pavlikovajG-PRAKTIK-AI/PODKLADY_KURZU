@@ -20,6 +20,7 @@
 - **Capstone** není modul — pravidlo 30 min se na něj nevztahuje
 - **Maximální počet obsahových modulů** = 5 (bez M0 a Capstone)
 - **Parametr „Délka celkem"** musí vždy odpovídat součtu délek všech modulů + Capstone
+- **Navazování kurzů se v první desítce kurzů nepoužívá.** V textu pro uživatele se neodkazuje na jiné kurzy — ani jako na prerekvizitu, ani jako na pokračování. Pole „Navazující kurzy (kódy)" zůstává prázdné a routing v rubrice (11.3) míří na konkrétní modul, fázi nebo sekci artefaktu **téhož kurzu**, nikoli na jiný kurz. Důvod: prvních deset kurzů se nasazuje souběžně, jejich číslování není finální a odkaz na kurz, který účastník nemá k dispozici, je slib bez krytí. Odkazy mezi kurzy se doplní, až bude katalog uzavřen.
 
 ---
 
@@ -111,6 +112,8 @@ Nejdůležitější skupina. Kurz, který ve F1 PREZENTACE učí oponentní form
 | „Seznámíte se s možnostmi AI." | Cíl formulovaný slovesem, které nelze ověřit. Matrice takové cíle nepřipouští. |
 | „V tomto modulu si povíme o…" | Ohlašuje výklad místo toho, aby začal. F1 PREZENTACE začíná IMPULSEM, ne anotací. |
 | „Nyní si ukážeme praktický příklad." | Věta, která pouze zabírá čas mezi dvěma obsahy. |
+| „Tento kurz je první, který otevřete." / „Tímto kurzem začíná vaše cesta platformou." | Věta o kurzu místo o obsahu. Popisuje zařazení v platformě, které účastník vidí sám, a v textu nenese žádnou informaci. Platí pro celou třídu meta-vět o pořadí, cestě, modulech, které přijdou, a o tom, co kurz „nabízí". |
+| „Na tento kurz navazuje kurz X." | V první desítce kurzů se navazování nepoužívá (oddíl 2). Odkaz na kurz, který účastník nemá k dispozici, je slib bez krytí. |
 
 ### 6.7 AI balast
 
@@ -141,6 +144,54 @@ Agent je použije na každou větu, kterou napíše:
 
 ---
 
+## 7. ANOTACE KURZU
+
+**Anotace je objektivní profesionální stručný popis kurzu.** Slouží k založení kurzu na platformě a do katalogu — potřebuje ji člověk, který kurz zakládá, ne účastník, který ho studuje. Je povinnou součástí souboru `<KOD>_<Nazev>_KURZ.md` a agent ji po dokončení podkladu **vypíše i do chatu**, aby byla hned po ruce.
+
+### 7.1 Formát
+
+- **Nejvýše 500 znaků** včetně mezer.
+- **Tři části v tomto pořadí:**
+  1. **Jedna věta** — pro koho kurz je a co ten člověk chce zvládnout.
+  2. **`Témata:`** — 4–6 témat oddělených čárkami, formulovaných jako obsah, ne jako sliby.
+  3. **`Výstupy:`** — artefakt a výčet toho, co obsahuje.
+- Bez nadpisu, bez odrážek, bez zvýraznění. Dva odstavce, čistý text ke zkopírování do formuláře.
+
+### 7.2 Co v anotaci nikdy není
+
+| Nepatří tam | Proč |
+|---|---|
+| Kód a název kurzu | Jsou to samostatná pole formuláře; v anotaci by se zdvojily. |
+| **Délka, počet modulů, počet fází** | Samostatná pole. Anotace neslibuje čas — slíbený a skutečný čas se rozcházejí a je to nejčastější důvod nedokončení. |
+| Druhá osoba a oslovení („projdete", „odnesete si", „abyste") | Anotace je neosobní popis. Vykání patří do kurzu, ne do katalogu. |
+| Popis deficitu účastníka („nemají jak poznat", „neumějí") | Popisujte **záměr** čtenáře, ne jeho nedostatek: „chtějí poznat", „potřebují rozhodnout". |
+| Slogan, pointa, závěrečná teze | To je anchor text, ne anotace. Anotace nekončí efektem. |
+| Rozsah artefaktu ve stranách nebo slovech | „dokument", nikoli „dvoustránkový dokument" — rozsah se mění a v katalogu zastarává. |
+| Superlativy a přísliby („naučíte se", „získáte jistotu", „jedinečný") | Anotace popisuje, co kurz obsahuje, nikoli co způsobí. |
+| Vyprávění a narativní přechody | Návěští `Témata:` a `Výstupy:` nesou strukturu; vyprávění ji rozmělňuje. |
+
+**Oddíl 6 (Věty, které nikdy nezazní) platí i pro anotaci**, včetně tří testů v 6.9.
+
+### 7.3 Anotace, anchor text a informační nota — tři různé texty
+
+| Text | Pro koho | Podoba | Kde |
+|---|---|---|---|
+| **Anotace** | člověk zakládající kurz, katalog | neosobní, ≤ 500 znaků, `Témata:` / `Výstupy:` | vlastní blok v `<KOD>_KURZ.md` + do chatu |
+| **Anchor text** | účastník v rozhraní | vykání, 2–3 věty, pojmenuje problém, smí provokovat | list 1.4 matrice |
+| **Informační nota** | účastník před spuštěním | vykání, prerekvizity, cílová skupina, co si připravit | list 1.4 matrice |
+
+Nezaměňovat a needitovat jeden podle druhého.
+
+### 7.4 Vzor (kurz A0101, 464 znaků)
+
+```
+Vstupní kurz pro všechny, kdo AI běžně používají a chtějí poznat, kdy jejímu výstupu věřit. Témata: jak model vytváří odpověď, proč plynulost není přesnost, jak zadání přeformulovat ze zrcadla na oponenta, co si nechat pro sebe a co dovoluje Směrnice rektora č. 7/2026.
+Výstupy: osobní protokol práce s AI — dokument s vlastním ověřeným tvrzením, třemi přepsanými zadáními, mapou úloh (které delegovat a které ne), a hotovou deklarací využití AI pro vlastní práci.
+```
+
+---
+
 *Pravidla odvozena z práce na kurzu B0201 (Zušťáková). Platí pro všechny nové kurzy.*
 *Oddíl 6 doplněn 20. 9. 2026 při přípravě kurzu A0101 (Liegertová, Pavlíková). Platí zpětně pro všechny kurzy.*
+*Oddíl 7 doplněn 20. 9. 2026 na základě autorského přepracování anotace kurzu A0101. Platí zpětně pro všechny kurzy.*
 *Srovnáno s Matricí v6.0 dne 20. 9. 2026: záhlaví, tvar ID OBJECTIVES a oddíl 5 (číselník CIS_Pojmy, mediální přílohy jako sekce 10).*

@@ -27,6 +27,7 @@ Výstup je `<KOD>_QA_report.md` ve složce kurzu a stručné shrnutí v chatu. K
 
 - Kód DB má formát písmeno + 4 číslice; kód UI odpovídá katalogu; slug bez diakritiky a mezer.
 - Vyplněno: řešený problém, artefakt, anchor text, informační nota, text certifikátu, EQF, délka.
+- **ANOTACE (oddíl 7 `systemova_pravidla.md`)**: existuje jako samostatný blok, **nejvýše 500 znaků** (spočítej je a uveď v reportu), struktura věta + `Témata:` + `Výstupy:`. FAIL, pokud chybí, přesahuje limit, nebo obsahuje délku kurzu, počet modulů, kód či název kurzu, druhou osobu (`projdete`, `odnesete si`, `abyste`, `naučíte se`), slogan, příslib, superlativ, rozsah artefaktu ve stranách nebo popis deficitu účastníka. Zkontroluj též, že anotace není totožná s anchor textem ani s informační notou — jsou to tři různé texty pro tři různé čtenáře (oddíl 7.3).
 - GOALS: slovesa 3. os. sg. podle Blooma, poslední GOAL míří na artefakt; každý GOAL pokryt alespoň jedním modulem.
 - OBJECTIVES: ID `<KOD>-Onn` unikátní, každý modul má 1–3, každá vazba na existující GOAL.
 - Každý modul má: název, IMPULS, F1, F2 s kódem FMT, F3 s kódem FMT, F4 se sekcí artefaktu, NP kódy s fází. Součet minut fází = délka modulu; F1 ≤ 5 min; modul ≤ 30 min (cílově 15–20).
@@ -47,7 +48,8 @@ Projdi 9 bodů DoD. U bodů, které nelze ověřit z textu (oponentura, zápis v
 - Vykání všude (hledej tykání: „tvůj“, „zkus“, „ti“, „tě“). Terminologie jen kanonická (hledej „výsledky učení“, „VL“, „kvíz“ mimo F3, „aktivita“, „vstupní hák“, „M1“ v uživatelském textu).
 - Jména v příkladech česká a střídaná; žádná Natalia. Obory v příkladech humanitní, žádné právo, biologie, ekonomie, medicína, informatika, obchodní komunikace (výjimka: oborový kurz daného předmětu).
 - Žádné KRAUU kódy mimo sekci 7. Anchor text pojmenovává problém, není příslib („naučíte se“).
-- **Zakázané věty (oddíl 6 `systemova_pravidla.md`)**: projdi všech osm skupin. Nález ze skupiny 6.4 (věty, které kurz sám odnaučuje) nebo 6.5 (rozpor se směrnicí a s doklady) = FAIL, ostatní skupiny = WARN. Hledej mimo jiné: „Skvělá“, „V dnešní době“, „Je důležité si uvědomit“, „Pojďme se podívat“, „revoluční“, „nesmírně“, „je tu a nikam nezmizí“, „jen nástroj“, „není otázka zda“, „stačí se správně zeptat“, „vezme vám práci“, „o krok napřed“, „detektor“, „poškozuje mozek“, „seznámíte se“, „si povíme“, „nebojte se“, „jednodušší, než si myslíte“, „zvládne to každý“.
+- **Zakázané věty (oddíl 6 `systemova_pravidla.md`)**: projdi všech osm skupin. Nález ze skupiny 6.4 (věty, které kurz sám odnaučuje) nebo 6.5 (rozpor se směrnicí a s doklady) = FAIL, ostatní skupiny = WARN. Hledej mimo jiné: „Skvělá“, „V dnešní době“, „Je důležité si uvědomit“, „Pojďme se podívat“, „revoluční“, „nesmírně“, „je tu a nikam nezmizí“, „jen nástroj“, „není otázka zda“, „stačí se správně zeptat“, „vezme vám práci“, „o krok napřed“, „detektor“, „poškozuje mozek“, „seznámíte se“, „si povíme“, „nebojte se“, „jednodušší, než si myslíte“, „zvládne to každý“, „první kurz“, „vaše cesta“, „navazuje kurz“.
+- **Navazování kurzů (oddíl 2 `systemova_pravidla.md`)**: v první desítce kurzů se nepoužívá. Odkaz na jiný kurz v textu pro uživatele, vyplněné pole „Navazující kurzy (kódy)“ nebo routing v rubrice 11.3 mířící na jiný kurz = FAIL. Routing musí mířit na modul, fázi nebo sekci artefaktu téhož kurzu.
 - Na sporné věty použij tři testy z oddílu 6.9 (zaměnitelnost, vlastní pravidlo, doložitelnost) a v reportu uveď, který test věta neprošla.
 - Kalibrace jistoty: u preprintů a sporných efektů je v F1 poznámka o síle evidence. Komerční produkty se nedoporučují jménem.
 - Pravidla používání AI pro účastníky existují (co smí, co ne, jak deklarovat). Dedikace TQ23000092 přítomna.
@@ -55,13 +57,13 @@ Projdi 9 bodů DoD. U bodů, které nelze ověřit z textu (oponentura, zápis v
 
 ## D Duplicita a spirála
 
-Otevři v katalogu řádky prerekvizit a navazujících kurzů (hledej podle kódu). Označ pasáže, které opakují obsah jiného kurzu místo odkazu na něj, a pojmy, které kurz předpokládá, ale prerekvizity je neučí.
+Otevři v katalogu řádky příbuzných kurzů (hledej podle kódu a tématu). Označ pasáže, které duplicitně zpracovávají obsah jiného kurzu, a pojmy, které kurz předpokládá, ale sám nevysvětluje. **Výsledek této kontroly je poznámka pro garanta, nikoli pokyn doplnit do kurzu odkaz** — v první desítce kurzů se navazování nepoužívá (oddíl 2 systémových pravidel). Chybějící vysvětlení pojmu se řeší doplněním do kurzu, ne odkazem jinam.
 
 ## Formát reportu
 
 ```
 # QA report <KOD> <Název>   (datum, verze kurzu)
-Verdikt: … | FAIL: n | WARN: n | Odhad reálné délky: … min
+Verdikt: … | FAIL: n | WARN: n | Odhad reálné délky: … min | Anotace: … znaků
 ## A Formální   (tabulka: kontrola | výsledek | místo | co změnit)
 ## B Definition of Done   (9 řádků)
 ## C Politika a styl

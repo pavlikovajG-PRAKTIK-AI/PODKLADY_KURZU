@@ -30,7 +30,7 @@ Když kód v katalogu neexistuje, napiš to a navrhni nejbližší kód nebo pra
 
 Napiš do chatu a ulož jako `<KOD>_<Nazev>_KURZ.md` pouze:
 
-1. Hlavičku a sekci 1 IDENTIFIKACE včetně anchor textu, informační noty a textu certifikátu.
+1. Hlavičku, **pracovní ANOTACI** (blok před sekcí 1, pravidla v `systemova_pravidla.md` oddíl 7) a sekci 1 IDENTIFIKACE včetně anchor textu, informační noty a textu certifikátu. Anotaci v kostře označ jako pracovní — dopřesníš ji podle hotových modulů v kroku 4.
 2. GOALS (3–4, Bloom 2 až 6, poslední vždy „Tvořit“ a míří na artefakt).
 3. OBJECTIVES (1–3 na modul, ID `<KOD>-Onn`, typ, testovatelnost, vazba).
 4. Blueprint artefaktu: tabulka povinných sekcí a v kterém F4 vznikají. Součet sekcí = počet modulů + úvod v capstone; každá sekce vzniká v právě jednom F4. Když zadání z rozhovoru obsahuje víc položek, neslučuj je sám: napiš návrh sloučení do kostry a nech autora rozhodnout.
@@ -60,7 +60,11 @@ Po posledním modulu vygeneruj capstone (varianta A nebo B podle rozhodnutí aut
 
 ## Krok 4: předání
 
-Ulož celý kurz jako `<KOD>_<Nazev>_KURZ.md` do složky kurzu (konvence v kánonu, sekce 9). Když je jako Project folder otevřená přímo složka kurzu, ukládej do ní; když je otevřená `09_Kurzy`, použij nebo založ podsložku `<Kód><NázevBezMezer>`. Uvnitř už otevřené složky kurzu nikdy nezakládej další `09_Kurzy/`. Pak nabídni:
+Ulož celý kurz jako `<KOD>_<Nazev>_KURZ.md` do složky kurzu (konvence v kánonu, sekce 9). Když je jako Project folder otevřená přímo složka kurzu, ukládej do ní; když je otevřená `09_Kurzy`, použij nebo založ podsložku `<Kód><NázevBezMezer>`. Uvnitř už otevřené složky kurzu nikdy nezakládej další `09_Kurzy/`.
+
+**Dopřesni ANOTACI podle hotových modulů a vypiš ji do chatu** jako samostatný blok ke zkopírování — potřebuje ji člověk, který kurz zakládá na platformě, a má ji mít hned po ruce, ne ji hledat v souboru. Pravidla: `systemova_pravidla.md`, oddíl 7 — nejvýše 500 znaků, jedna věta o tom, pro koho kurz je, pak `Témata:` a `Výstupy:`, neosobně, **bez délky, počtu modulů, oslovení, sloganu a příslibů**. Uveď pod ní počet znaků.
+
+Pak nabídni:
 - `praktik-qa` (kontrola vůči Definition of Done a formuláři oponenta),
 - `praktik-export` (docx pro autora, garanta a oponenta),
 - `av-materialy` (video, audio, grafiky).
