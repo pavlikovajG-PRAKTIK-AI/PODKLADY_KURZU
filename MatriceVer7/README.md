@@ -8,7 +8,7 @@ Stav: 25. 9. 2026 · Podklad změn: audit promptů generátoru kurzů platformy 
 |---|---|
 | `PRAKTIK-AI_Matrice_kurzu_v7.0.xlsx` | šablona matrice kurzu, verze 7.0 (vychází z v6.0, všechny listy, komentáře a validace zachovány) |
 | `PRAKTIK-AI_Prompt_Metodicky_architekt_v3.0.md` / `.docx` | systémový prompt pro tvorbu matrice podle v7.0 (nahrazuje v2.2) |
-| `Prompty_generatoru_kurzu_v2.md` | návrh promptů generátoru platformy (course_summarizer, course_planner) sladěný s v7.0 |
+| `Prompty_generatoru_kurzu_v2.md` | prompty generátoru platformy verze 2.1 (summarizer, planner, otázky a hodnotitelé) sladěné s v7.0, včetně kroků pro IT |
 
 ## Co je nového v Matrici v7.0
 

@@ -120,10 +120,9 @@ AI asistent v textu pro účastníka je vždy **oponent, ne vysvětlovač**. Ú�
    - Pravidla pro tvorbu (zápis rozhovoru, QA report, východiska) = pokyny. Neučí se z nich, ale platí.
    - Hotový kurz = osnova ke konverzi. Fakta z něj ověř proti ostatním zdrojům.
 2. **Fakta s kontextem:** u každého čísla, studie a pravidla uveď, čeho se týká (obor, populace, typ studie), odkud je (autor, rok, dokument, odstavec) a jakou má sílu důkazu (recenzovaná studie, metaanalýza, preprint, názor).
-3. **Rozpory ve zdrojích:**
-   - Nerozhoduj za autora. Zapiš rozpor do 14_Zdroje (Známé rozpory) a do hlášení.
-   - Do textu pro účastníka dej znění podle nejzávaznějšího zdroje (předpis > metodika > ostatní) s odkazem na plné znění.
-   - Pokud to pomůže porozumění, využij rozpor k objasnění problému.
+3. **Rozpory ve zdrojích:** nerozhoduj za autora a zapiš rozpor do 14_Zdroje (Známé rozpory). Rozlišuj dva typy:
+   - **nesoulad pravidel** (předpisy, metodiky, interní dokumenty): do textu pro účastníka dej znění podle nejzávaznějšího zdroje (předpis > metodika > ostatní) s odkazem na plné znění; pokud to pomůže porozumění, využij rozpor k objasnění problému; vždy ho nahlas.
+   - **vědecký spor** (dvě výzkumná zjištění): vylož obě se silou důkazu; u vyšších úrovní jako otevřenou otázku oboru. Hlas ho jen tehdy, když chybí zdroj nebo síla důkazu.
 4. **Anti-halucinační protokol:** uváděj jen ověřitelné zdroje s funkčními odkazy nebo DOI. Když zdroj nenajdeš, přiznej to a nabídni Boolean řetězec pro vyhledávání. Vymyšlený zdroj je kritická chyba.
 5. **Ilustrační situace** (modelová ukázka z práce skupiny) je dovolená, jen když přenáší princip ze zdroje a nepřidává nová fakta. Označ ji „Modelová situace" a hlas ji jako problém „chybí autentický příklad".
 
@@ -151,7 +150,7 @@ Typy problémů:
 | Nesoulad úrovně se zdroji | Např. zdroj je psaný pro začátečníky, kurz je pokročilý. |
 | Látka nejde rozdělit do zadaného počtu modulů | Navrhni jiný počet a rozvržení. |
 
-Hlášení je pro metodika, ne pro účastníka. Piš ho věcně. Metodik ho vyřeší a z textu odstraní; kurz s otevřeným hlášením neprojde automatickou kontrolou v listu 13_Validace.
+Nejvýše 3 hlášení na modul, nejzávažnější první; problémy stejného druhu spoj do jednoho. Problém, který se týká více modulů, hlas jen v modulu, kde se látka vykládá. Stav metadat (kód čeká na potvrzení) nehlas. „Zdroj nestačí na rozsah F1" hlas, až když F1 vyjde pod 75 % dolní meze z oddílu 5. Hlášení je pro metodika, ne pro účastníka. Piš ho věcně. Metodik ho vyřeší a z textu odstraní; kurz s otevřeným hlášením neprojde automatickou kontrolou v listu 13_Validace.
 
 ## 11 Pracovní postup
 
