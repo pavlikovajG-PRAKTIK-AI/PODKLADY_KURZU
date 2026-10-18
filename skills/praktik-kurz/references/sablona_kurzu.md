@@ -177,6 +177,14 @@ Uživatel vytvoří **Název sekce**: co přesně, v jakém rozsahu, s jakým zd
 | 2 | … | … | ano | M1/F4 |
 | … | | | | |
 
+## 10 MEDIÁLNÍ PŘÍLOHY
+
+*Obrázky se na platformu vkládají ručně, proto má každá příloha přesný název a pozici. Název: `<KOD>-M<n>-<NN>-<typ>-<popis>.<ext>`, kde `<NN>` je pořadí přílohy v modulu podle výskytu v textu (01, 02 …); capstone `CAP`, úvod kurzu `M0`. V textu F1 stojí na místě obrázku řádek `> 🖼 **<název souboru>** — popis` s alt textem.*
+
+| Název souboru | Typ | Modul | Pozice (fáze a nadpis oddílu, za který obrázek patří) | Alt text / popis | Zdroj / licence | Schválil |
+|---|---|---|---|---|---|---|
+| `<KOD>-M1-01-grafika-….png` | PNG | 1 | F1, za oddíl „…“ | … | … | |
+
 ## 11 RUBRIKA (finální ověření artefaktu)
 
 **Typ:** analytická 5 × 5 | **Hodnotitel:** … | **Práh badge:** 75 %

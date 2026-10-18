@@ -18,7 +18,8 @@
 
 - **Maximální délka modulu** = 30 min (závazně pro nové kurzy)
 - **Capstone** není modul — pravidlo 30 min se na něj nevztahuje
-- **Maximální počet obsahových modulů** = 5 (bez M0 a Capstone)
+- **Délka modulů a kurzu.** Při tvorbě se délka každého modulu nastavuje primárně jako pevná (podle schváleného plánu modulů). Při kontrole modulů a finální úpravě celého kurzu se délka modulu smí lišit až o ±5 minut. Délka je významná, ale není primárním rozhodovacím kritériem: rozhoduje vždy kvalita obsahu a metodika kurzu. *(Pokyn J. Pavlíkové, 18. 10. 2026.)*
+- **Maximální počet obsahových modulů** = 12 (bez M0 a Capstone; podle Matrice v7.2)
 - **Parametr „Délka celkem"** musí vždy odpovídat součtu délek všech modulů + Capstone
 - **Navazování kurzů se v první desítce kurzů nepoužívá.** V textu pro uživatele se neodkazuje na jiné kurzy — ani jako na prerekvizitu, ani jako na pokračování. Pole „Navazující kurzy (kódy)" zůstává prázdné a routing v rubrice (11.3) míří na konkrétní modul, fázi nebo sekci artefaktu **téhož kurzu**, nikoli na jiný kurz. Důvod: prvních deset kurzů se nasazuje souběžně, jejich číslování není finální a odkaz na kurz, který účastník nemá k dispozici, je slib bez krytí. Odkazy mezi kurzy se doplní, až bude katalog uzavřen.
 
@@ -51,6 +52,7 @@
 
 ## 5. ŠABLONA A FORMÁT
 
+- **Odkazy na kurzy autorů** (např. KAJ/7033, KAJ/7135 nebo jiné předměty v Moodlu) do finální verze podkladu kurzu (`<KOD>_KURZ.md`) nepatří, ani do zdrojů, ani do metodických poznámek. Když je obsah takového kurzu užitečný, agent si nejdřív načte jeho přesné znění a pracuje jen s obsahem, bez odkazu na kurz. *(Pokyn J. Pavlíkové, 18. 10. 2026.)*
 - **Platná šablona** = Matrice kurzu v6.0
 - **Pojmy a zkratky** jsou v číselníku `CIS_Pojmy` (referenční přehled systémových termínů) — jen se z něj čte, needituje se. Samostatná sekce „✦ Slovník pojmů“ z v4.0 v matrici v6.0 není
 - **Sloupec „Schválil"** v sekci 10 (Mediální přílohy) — ponechává se prázdný, doplňuje vedoucí metodického týmu před publikací. Pozor: v v6.0 je sekce 9 ARTEFAKT, mediální přílohy se přesunuly do sekce 10
@@ -152,8 +154,8 @@ Agent je použije na každou větu, kterou napíše:
 
 - **Nejvýše 500 znaků** včetně mezer.
 - **Tři části v tomto pořadí:**
-  1. **Jedna věta** — pro koho kurz je a co ten člověk chce zvládnout.
-  2. **`Témata:`** — 4–6 témat oddělených čárkami, formulovaných jako obsah, ne jako sliby.
+  1. **Jedna věta** — pro koho kurz je a co ten člověk chce zvládnout. Smí následovat jedna věta o tom, co se účastník v kurzu naučí, formulovaná neosobně (např. „Účastníci se naučí…“).
+  2. **Témata** — jedna až dvě věty, které obsah kurzu shrnou v širších celcích. Návěští `Témata:` není povinné; věta může začít přímo („Kurz vysvětluje…“). Nevypisovat názvy modulů ani výčet témat; formulovat jako obsah, ne jako sliby.
   3. **`Výstupy:`** — artefakt a výčet toho, co obsahuje.
 - Bez nadpisu, bez odrážek, bez zvýraznění. Dva odstavce, čistý text ke zkopírování do formuláře.
 
@@ -167,8 +169,10 @@ Agent je použije na každou větu, kterou napíše:
 | Popis deficitu účastníka („nemají jak poznat", „neumějí") | Popisujte **záměr** čtenáře, ne jeho nedostatek: „chtějí poznat", „potřebují rozhodnout". |
 | Slogan, pointa, závěrečná teze | To je anchor text, ne anotace. Anotace nekončí efektem. |
 | Rozsah artefaktu ve stranách nebo slovech | „dokument", nikoli „dvoustránkový dokument" — rozsah se mění a v katalogu zastarává. |
-| Superlativy a přísliby („naučíte se", „získáte jistotu", „jedinečný") | Anotace popisuje, co kurz obsahuje, nikoli co způsobí. |
-| Vyprávění a narativní přechody | Návěští `Témata:` a `Výstupy:` nesou strukturu; vyprávění ji rozmělňuje. |
+| Superlativy a silné přísliby („získáte jistotu", „dokážete", „jedinečný") | Anotace popisuje, co kurz obsahuje. Přínos formulovat zdrženlivě: „získá informace", ne „získá jistotu"; „osvojí si dovednost", ne „dokáže". Totéž platí pro anchor text a informační notu (ve druhé osobě: „získáte informace", „osvojíte si dovednost"). |
+| Odkaz na konkrétní předpis instituce (např. Směrnice rektora UJEP č. 7/2026) | Kurzy jsou určeny i uživatelům mimo UJEP. Úvodní texty (anotace, anchor text, informační nota, perex) mluví obecně o pravidlech instituce. Předpis smí citovat obsah kurzu, který se jím přímo zabývá, a podklad kurzu (kostra). |
+| Názvy modulů a výčet témat | Anotace shrnuje obsah v širších celcích; výčet názvů opakuje osnovu a nic o kurzu neřekne. |
+| Vyprávění a narativní přechody | Souvislá věta o tématech není vyprávění; vyprávění a přechody strukturu anotace rozmělňují. Návěští `Výstupy:` zůstává. |
 
 **Oddíl 6 (Věty, které nikdy nezazní) platí i pro anotaci**, včetně tří testů v 6.9.
 
@@ -176,17 +180,19 @@ Agent je použije na každou větu, kterou napíše:
 
 | Text | Pro koho | Podoba | Kde |
 |---|---|---|---|
-| **Anotace** | člověk zakládající kurz, katalog | neosobní, ≤ 500 znaků, `Témata:` / `Výstupy:` | vlastní blok v `<KOD>_KURZ.md` + do chatu |
+| **Anotace** | člověk zakládající kurz, katalog | neosobní, ≤ 500 znaků, témata souvislou větou, `Výstupy:` | vlastní blok v `<KOD>_KURZ.md` + do chatu |
 | **Anchor text** | účastník v rozhraní | vykání, 2–3 věty, pojmenuje problém, smí provokovat | list 1.4 matrice |
 | **Informační nota** | účastník před spuštěním | vykání, prerekvizity, cílová skupina, co si připravit | list 1.4 matrice |
 
 Nezaměňovat a needitovat jeden podle druhého.
 
-### 7.4 Vzor (kurz A0101, 464 znaků)
+**Předpisy instituce.** Agent vždy dá autorovi ke zvážení, zda je nutné odkazovat přímo na konkrétní předpis (např. Směrnice rektora UJEP č. 7/2026), nebo stačí obecná pravidla instituce. UJEP může zůstat jako příklad.
+
+### 7.4 Vzor (kurz A0101, 491 znaků; znění autorky 16. 10. 2026)
 
 ```
-Vstupní kurz pro všechny, kdo AI běžně používají a chtějí poznat, kdy jejímu výstupu věřit. Témata: jak model vytváří odpověď, proč plynulost není přesnost, jak zadání přeformulovat ze zrcadla na oponenta, co si nechat pro sebe a co dovoluje Směrnice rektora č. 7/2026.
-Výstupy: osobní protokol práce s AI — dokument s vlastním ověřeným tvrzením, třemi přepsanými zadáními, mapou úloh (které delegovat a které ne), a hotovou deklarací využití AI pro vlastní práci.
+Vstupní kurz pro všechny, kdo AI běžně používají a chtějí poznat, kdy a proč jejímu výstupu věřit. Kurz vysvětluje, jak model vytváří odpověď a proč plynulost textu nezaručuje přesnost, a zabývá se zadáním, které výstup prověřuje, volbou práce, kterou lze AI svěřit, a institucionálními pravidly.
+Výstupy: osobní protokol práce s AI, tj. dokument s vlastním ověřeným tvrzením, třemi přepsanými zadáními, mapou úloh určených a neurčených k delegování a deklarací využití AI pro vlastní práci.
 ```
 
 ---

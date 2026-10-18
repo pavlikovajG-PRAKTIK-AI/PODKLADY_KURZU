@@ -117,4 +117,4 @@ Interní mapování, uživateli se nezobrazuje. Kurz mapuje 3–8 kompetencí.
 - **Hodnotitel rubriky:** User (sebehodnocení) · Lektor · Garant · AI · Kombinace. **Práh badge:** 75 %. **Skip-test:** 80 %, jen deklarativní moduly.
 - **Úrovně rubriky (závazné názvy):** Mistrovství 81–100 % · Zdatnost 61–80 % · Způsobilost 41–60 % · Rozvoj 21–40 % · Začátek 0–20 %. Max. 5 kritérií, váhy v %.
 - **Role na platformě:** ROLE-01 User · ROLE-02 Lektor · ROLE-03 Garant · ROLE-04 Super admin.
-- **Mediální přílohy:** názvy `[KOD]-[Mx]-[typ]-[popis].[ext]`, formáty PNG, SVG, MP3 (video platforma zatím nepodporuje, shrnutí se dodává jako MP4 mimo platformu).
+- **Mediální přílohy:** názvy `[KOD]-[Mx]-[NN]-[typ]-[popis].[ext]` (NN = pořadí přílohy v modulu, 01, 02 …; obrázky se vkládají ručně, v sekci 10 vždy uvést modul, fázi a nadpis oddílu, za který patří), formáty PNG, SVG, MP3 (video platforma zatím nepodporuje, shrnutí se dodává jako MP4 mimo platformu).

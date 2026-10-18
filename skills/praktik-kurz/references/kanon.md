@@ -6,7 +6,7 @@ Projekt TQ23000092 PRAKTIK-AI (UJEP + OU). Platforma vzdělává akademiky, stud
 
 | Správně | Význam | Zakázáno |
 |---|---|---|
-| KURZ | ucelený celek: identifikace, GOALS, M0 skip, 1–5 modulů, capstone, ARTEFAKT | „lekce“, „školení“ |
+| KURZ | ucelený celek: identifikace, GOALS, M0 skip, 1–12 modulů, capstone, ARTEFAKT | „lekce“, „školení“ |
 | GOALS | výkonové cíle kurzu podle Blooma (3. os. sg., sloveso + objekt + podmínka) | „cíle kurzu“, „výsledky učení“ |
 | OBJECTIVES | dílčí cíle modulu, ID `KÓD-Onn` (např. A0601-O3), 1–3 na modul | „VL“, „dílčí cíle“ |
 | IMPULS | úvodní věta nebo otázka modulu, překvapení, mýtus, situace z praxe | „vstupní hák“, „úvod“ |
@@ -48,6 +48,7 @@ ZDROJE (ověřeno k datu)
 
 - Kurz 60–105 min, mikrokurz 30–45 min, pilotní kurz ZŠ 120 min. Délka celkem = součet modulů + capstone.
 - Modul 15–20 min (tvrdý strop 30 min). Typické rozložení: F1 5 · F2 4 · F3 3 · F4 3.
+- Délka modulu se při tvorbě nastavuje jako pevná podle plánu modulů; při kontrole modulů a finální úpravě kurzu se smí lišit až o ±5 min. Délka je významná, ale rozhoduje vždy kvalita obsahu a metodika kurzu (pokyn J. Pavlíkové, 18. 10. 2026).
 - F1 nikdy přes 5 min čtení, tedy zhruba 250–400 slov. Jeden modul = jeden jasný poznatek.
 - Max. 5 obsahových modulů. Modul 1 = proč je to problém, moduly 2–4 = obsah od jednoduššího ke složitějšímu, modul 5 = aplikace a reflexe.
 - Rozsah jednoho vygenerovaného modulu v chatu: max. 2 normostrany (3 600 znaků) bez tabulek.
@@ -84,6 +85,8 @@ Vyber 4–12 principů z NP-01 až NP-20 pro kurz, u každého modulu 2–5 s ur
 - Nedoporučovat komerční produkty, mluvit o kategoriích nástrojů a kritériích.
 - Kurz obsahuje explicitní pravidla používání AI pro účastníky (co smí, co ne, jak deklarovat) a alespoň jeden explicitní limit nebo antipattern.
 
+- Finální podklad kurzu neodkazuje na kurzy autorů (např. KAJ/7033, KAJ/7135); jejich obsah lze použít jen po načtení přesného znění a bez odkazu (pokyn J. Pavlíkové, 18. 10. 2026).
+
 ## 8 Vstupy, bez kterých kurz nevzniká
 
 1. Kód kurzu z katalogu (nebo důvod, proč kurz v katalogu není) a cílová skupina.
@@ -97,7 +100,7 @@ Vyber 4–12 principů z NP-01 až NP-20 pro kurz, u každého modulu 2–5 s ur
 - Složka kurzu: `09_Kurzy/<Kód><NázevBezMezer>/`, např. `A0601VyvojDetskehoMozku/`. Cesta je uvedená vůči kořeni projektu; když už je složka kurzu otevřená jako pracovní, soubory patří přímo do ní.
 - Kurz: `<KOD>_<NazevBezDiakritiky>_KURZ.md`, export `<KOD>_<Nazev>_KURZ.docx` (výstupy projektu jsou vždy docx, ne PDF).
 - Rozhovor: `<KOD>_Rozhovor.md`. QA report: `<KOD>_QA_report.md`.
-- Mediální přílohy: `<KOD>-M<n>-<typ>-<popis>.<ext>` (svg, png, mp3, mp4).
+- Mediální přílohy: `<KOD>-M<n>-<NN>-<typ>-<popis>.<ext>` (svg, png, mp3, mp4), kde `<NN>` je dvoumístné pořadí přílohy v daném modulu podle výskytu v textu (01, 02 …); capstone `CAP`, úvod kurzu `M0`. Příklad: `A01-M2-01-grafika-pritakavani-komiks.png`. Obrázky se na platformu vkládají ručně, proto má každá příloha v sekci 10 i přesnou pozici: modul, fáze a nadpis oddílu, za jehož text patří (pokyn J. Pavlíkové, 18. 10. 2026).
 - Kód DB = písmeno + 4 číslice (A0601), kód UI = katalogový (A6), slug bez diakritiky s pomlčkami.
 - V hlavičce kurzu vždy: verze, datum, autor podkladu, poznámka „K potvrzení garantem“ s otevřenými body.
 - Dedikace: „Vzniklo v projektu TQ23000092 PRAKTIK-AI (TA ČR, program SIGMA).“

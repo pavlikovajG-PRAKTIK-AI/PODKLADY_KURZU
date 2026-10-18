@@ -36,5 +36,5 @@ else {
 }
 
 Write-Host ""
-Write-Host "Hotovo. V karte Code v Claude Desktop napiste /praktik (nebo /praktik-kurz, /praktik-rozhovor, /praktik-qa, /praktik-export)."
+Write-Host "Hotovo. V karte Code v Claude Desktop napiste /praktik (nebo /praktik-kurz, /praktik-rozhovor, /praktik-qa, /praktik-export, /kontrola-kurzu)."
 Write-Host "Claude Code slozku se skilly sleduje, novou verzi zachyti i v uz bezici relaci. Kdyz se skill nenabidne, otevrete novou relaci."

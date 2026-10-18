@@ -17,7 +17,7 @@ Výstup je `<KOD>_QA_report.md` ve složce kurzu a stručné shrnutí v chatu. K
 ## Postup
 
 1. Načti soubor kurzu. Zjisti kód, počet modulů, deklarovanou délku.
-2. Projdi kontroly A až D níže. Ke každé napiš PASS, FAIL nebo WARN, u FAIL a WARN přesné místo (sekce, modul, fáze) a jednu větu, co změnit.
+2. Projdi kontroly A až D a P níže. Ke každé napiš PASS, FAIL nebo WARN, u FAIL a WARN přesné místo (sekce, modul, fáze) a jednu větu, co změnit.
 3. Vyplň sebehodnocení podle formuláře oponenta (10 oblastí, škála 1–4) s jednou konkrétní připomínkou na oblast.
 4. Simulovaný průchod: projdi kurz očima účastníka cílové skupiny po pracovní době. Zapiš, kde by odešel a proč, a odhad reálné délky.
 5. Sepiš „Tři nejdůležitější změny“ v pořadí priority a „Co funguje, zachovat“.
@@ -30,7 +30,7 @@ Výstup je `<KOD>_QA_report.md` ve složce kurzu a stručné shrnutí v chatu. K
 - **ANOTACE (oddíl 7 `systemova_pravidla.md`)**: existuje jako samostatný blok, **nejvýše 500 znaků** (spočítej je a uveď v reportu), struktura věta + `Témata:` + `Výstupy:`. FAIL, pokud chybí, přesahuje limit, nebo obsahuje délku kurzu, počet modulů, kód či název kurzu, druhou osobu (`projdete`, `odnesete si`, `abyste`, `naučíte se`), slogan, příslib, superlativ, rozsah artefaktu ve stranách nebo popis deficitu účastníka. Zkontroluj též, že anotace není totožná s anchor textem ani s informační notou — jsou to tři různé texty pro tři různé čtenáře (oddíl 7.3).
 - GOALS: slovesa 3. os. sg. podle Blooma, poslední GOAL míří na artefakt; každý GOAL pokryt alespoň jedním modulem.
 - OBJECTIVES: ID `<KOD>-Onn` unikátní, každý modul má 1–3, každá vazba na existující GOAL.
-- Každý modul má: název, IMPULS, F1, F2 s kódem FMT, F3 s kódem FMT, F4 se sekcí artefaktu, NP kódy s fází. Součet minut fází = délka modulu; F1 ≤ 5 min; modul ≤ 30 min (cílově 15–20).
+- Každý modul má: název, IMPULS, F1, F2 s kódem FMT, F3 s kódem FMT, F4 se sekcí artefaktu, NP kódy s fází. Součet minut fází = délka modulu; F1 ≤ 5 min; modul ≤ 30 min (cílově 15–20). Odchylka délky modulu od plánu do ±5 min je v pořádku, větší odchylka = WARN; délka není primární kritérium, rozhoduje kvalita obsahu a metodika (pokyn J. Pavlíkové, 18. 10. 2026).
 - Délka celkem = součet modulů + capstone a odpovídá formátu (kurz 60–105, mikrokurz 30–45, pilot ZŠ 120).
 - Capstone má variantu A nebo B. Sekce 9 ARTEFAKT má šablonu sekcí a každá sekce má právě jedno „vzniká v“ — `M?/F4`, nebo `Capstone`. Počet sekcí = počet modulů + 1 úvodní sekce z capstone (5 modulů = 6 sekcí, jako ve vzoru A0601). Sekce, která by vznikala ve dvou modulech, je chyba: rozděl ji, nebo obě části slouč do jedné sekce jednoho F4.
 - Rubrika: max. 5 kritérií, závazné názvy úrovní, váhy dávají 100 %, práh badge 75 %, routing silný / slabý / mezera.
@@ -52,8 +52,14 @@ Projdi 9 bodů DoD. U bodů, které nelze ověřit z textu (oponentura, zápis v
 - **Navazování kurzů (oddíl 2 `systemova_pravidla.md`)**: v první desítce kurzů se nepoužívá. Odkaz na jiný kurz v textu pro uživatele, vyplněné pole „Navazující kurzy (kódy)“ nebo routing v rubrice 11.3 mířící na jiný kurz = FAIL. Routing musí mířit na modul, fázi nebo sekci artefaktu téhož kurzu.
 - Na sporné věty použij tři testy z oddílu 6.9 (zaměnitelnost, vlastní pravidlo, doložitelnost) a v reportu uveď, který test věta neprošla.
 - Kalibrace jistoty: u preprintů a sporných efektů je v F1 poznámka o síle evidence. Komerční produkty se nedoporučují jménem.
+- **Odkazy na kurzy autorů** (KAJ/7033, KAJ/7135, jiné předměty v Moodlu) ve finálním podkladu = FAIL; obsah ano, odkaz ne (pokyn J. Pavlíkové, 18. 10. 2026).
 - Pravidla používání AI pro účastníky existují (co smí, co ne, jak deklarovat). Dedikace TQ23000092 přítomna.
 - Přístupnost: každá zmíněná grafika má popis nebo alt text; kurz je průchozí bez zvuku a videa.
+- **Mediální přílohy:** každá má název s pořadím v modulu (`<KOD>-M<n>-<NN>-…`, kánon oddíl 9) a v sekci 10 přesnou pozici (modul, fáze, nadpis oddílu). Obrázky se na platformu vkládají ručně; chybějící pořadí nebo pozice = WARN.
+
+## P Předpisy (normativní texty)
+
+Když kurz vykládá normativní text (směrnice UJEP, AI Act, GDPR, zákon, studijní řád), vyžádej si jeho **oficiální znění** (PDF z webu instituce, ne pracovní verzi ani výklad) a ověř každé číslo článku nebo odstavce a obsah, který mu kurz přisuzuje: výchozí pravidla, podmínky, výjimky, okruh adresátů. Rozpor se zněním = FAIL. Oficiální znění není k dispozici = FAIL „nelze ověřit“. Příklad z 18. 10. 2026: A0101 přisuzoval odst. 5.1 Směrnice rektora č. 7/2026 povinnost předchozí konzultace, ačkoli odst. 5.1 stanoví výchozí režim „AI povolena s podmínkami“ a konzultaci ukládá jen odst. 5.3 u zadaných prací.
 
 ## D Duplicita a spirála
 
@@ -63,11 +69,13 @@ Otevři v katalogu řádky příbuzných kurzů (hledej podle kódu a tématu). 
 
 ```
 # QA report <KOD> <Název>   (datum, verze kurzu)
+Nahrát na platformu: ANO / NE   (NE, když je FAIL u zdrojů, placeholderů nebo předpisů; pod řádkem výčet, co chybí)
 Verdikt: … | FAIL: n | WARN: n | Odhad reálné délky: … min | Anotace: … znaků
 ## A Formální   (tabulka: kontrola | výsledek | místo | co změnit)
 ## B Definition of Done   (9 řádků)
 ## C Politika a styl
 ## D Duplicita a spirála
+## P Předpisy   (odstavec | co mu kurz přisuzuje | oficiální znění | výsledek)
 ## Sebehodnocení podle formuláře oponenta (10 oblastí, 1–4, připomínka)
 ## Simulovaný průchod účastníkem (kde by odešel, proč)
 ## Tři nejdůležitější změny
@@ -75,3 +83,9 @@ Verdikt: … | FAIL: n | WARN: n | Odhad reálné délky: … min | Anotace: …
 ```
 
 Buď konkrétní a stručný: jeden řádek na kontrolu. Nechval, nekomentuj vlastní postup.
+
+## Řádek „Nahrát na platformu“
+
+Odpověď NE vychází jen ze tří důvodů: (1) zdroje nejsou ověřené (chybí datum ověření, „Stav ověření: neověřeno“, chybějící DOI nebo URL), (2) v textu zůstal placeholder („K doplnění“, „doplňte“, „TBD“), (3) FAIL v oddílu P Předpisy. Délka, styl a ostatní WARN nahrání nezastaví. O nahrání rozhoduje autor nebo garant; řádek je doporučení, ne technická zábrana. Kurz se na platformu nahrává tak, že ho platforma z KURZ.md vygeneruje pomocí AI a autor výstup ručně doopraví, takže část oprav už touto kontrolou znovu neprojde.
+
+Při odpovědi ANO připiš: „Po vygenerování kurzu na platformě spusťte `kontrola-kurzu`.“
