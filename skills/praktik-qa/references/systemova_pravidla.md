@@ -1,5 +1,5 @@
 # PRAKTIK-AI — Systémová pravidla projektu
-## Platná pro všechny kurzy a metodiky | Matrice v6.0
+## Platná pro všechny kurzy a metodiky | Matrice v7.2
 
 ---
 
@@ -53,9 +53,9 @@
 ## 5. ŠABLONA A FORMÁT
 
 - **Odkazy na kurzy autorů** (např. KAJ/7033, KAJ/7135 nebo jiné předměty v Moodlu) do finální verze podkladu kurzu (`<KOD>_KURZ.md`) nepatří, ani do zdrojů, ani do metodických poznámek. Když je obsah takového kurzu užitečný, agent si nejdřív načte jeho přesné znění a pracuje jen s obsahem, bez odkazu na kurz. *(Pokyn J. Pavlíkové, 18. 10. 2026.)*
-- **Platná šablona** = Matrice kurzu v6.0
-- **Pojmy a zkratky** jsou v číselníku `CIS_Pojmy` (referenční přehled systémových termínů) — jen se z něj čte, needituje se. Samostatná sekce „✦ Slovník pojmů“ z v4.0 v matrici v6.0 není
-- **Sloupec „Schválil"** v sekci 10 (Mediální přílohy) — ponechává se prázdný, doplňuje vedoucí metodického týmu před publikací. Pozor: v v6.0 je sekce 9 ARTEFAKT, mediální přílohy se přesunuly do sekce 10
+- **Platná šablona** = Matrice kurzu v7.2
+- **Pojmy a zkratky** jsou v číselníku `CIS_Pojmy` (referenční přehled systémových termínů) — jen se z něj čte, needituje se. Samostatná sekce „✦ Slovník pojmů“ z v4.0 v matrici v7.2 není
+- **Sloupec „Schválil"** v sekci 10 (Mediální přílohy) — ponechává se prázdný, doplňuje vedoucí metodického týmu před publikací. Sekce 9 je ARTEFAKT (list `9_Artefakt`), mediální přílohy jsou v sekci 10 (list `10_Medialni_prilohy`)
 - **Databáze scénářů** — pokud ☑ ano, vždy doplnit: „anonymizovaně, pouze po souhlasu autora"
 
 ---
@@ -201,3 +201,4 @@ Výstupy: osobní protokol práce s AI, tj. dokument s vlastním ověřeným tvr
 *Oddíl 6 doplněn 20. 9. 2026 při přípravě kurzu A0101 (Liegertová, Pavlíková). Platí zpětně pro všechny kurzy.*
 *Oddíl 7 doplněn 20. 9. 2026 na základě autorského přepracování anotace kurzu A0101. Platí zpětně pro všechny kurzy.*
 *Srovnáno s Matricí v6.0 dne 20. 9. 2026: záhlaví, tvar ID OBJECTIVES a oddíl 5 (číselník CIS_Pojmy, mediální přílohy jako sekce 10).*
+*Srovnáno s Matricí v7.2 dne 18. 10. 2026: záhlaví a oddíl 5 (platná šablona, list CIS_Pojmy, listy 9_Artefakt a 10_Medialni_prilohy se sloupcem Schválil, list 1.4 Anchor text a informační nota).*
