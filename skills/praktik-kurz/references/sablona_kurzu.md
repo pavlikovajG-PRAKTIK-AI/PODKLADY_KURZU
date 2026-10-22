@@ -7,23 +7,48 @@ Vyplňuj bez placeholderů. Co nevíš, dej do poznámky „K potvrzení garante
 
 ### Podtitul: jedna věta, která pojmenuje problém
 
-**Kompletní textový základ kurzu dle PRAKTIK-AI Matrice v6.0**
-Verze 1.0 | D. M. RRRR | Autor podkladu: Jméno Příjmení (e-mail)
+**Kompletní textový základ kurzu dle PRAKTIK-AI Matrice v7.2**
+Verze 1.0 | D. M. RRRR | Autoři podkladu: Příjmení, Příjmení (hlavní autor první)
+Zdrojový podklad: soubory, z nichž kurz vznikl (rešerše, články, dřívější verze)
 
-> ⚠ **K potvrzení garantem:** pracovní kód kurzu **X0000** (blok, kolize s kurikulem), EQF, délka; otevřené body.
+> ⚠ **K potvrzení garantem:** pracovní kód kurzu **X0000** (blok, kolize s kurikulem), EQF, odchylky od pravidel, modelové situace, zdroje čtené jen v abstraktu; otevřené body.
 
 ---
 
 ## ANOTACE (pro založení kurzu na platformě)
 
-*Nejvýše 500 znaků. Pravidla v `systemova_pravidla.md`, oddíl 7: bez kódu, názvu, délky, počtu modulů, druhé osoby, sloganu a příslibů. Po dokončení kurzu se vypisuje i do chatu.*
+*Nejvýše 500 znaků. Pravidla v `systemova_pravidla.md`, oddíl 7 (vzor 7.4): bez kódu, názvu, délky, počtu modulů, druhé osoby, sloganu, příslibů, názvů modulů a výčtu témat. Po dokončení kurzu se vypisuje i do chatu.*
 
 ```
-Vstupní kurz pro [koho] a [co ten člověk chce zvládnout]. Témata: [4–6 témat oddělených čárkami].
-Výstupy: [artefakt] — dokument s [výčtem toho, co obsahuje].
+Kurz pro [koho], kteří chtějí [záměr]. Kurz vysvětluje [obsah v širších celcích, jedna až dvě věty].
+Výstupy: [artefakt], tj. dokument s [výčtem toho, co obsahuje].
 ```
 
 *(xxx znaků)*
+
+---
+
+## 0.2 Údaje pro založení kurzu na platformě
+
+*Pořadí odpovídá formuláři Kurzy → Popis kurzu (krok 1 ze 4); Matrice v7.2, list 00_Zalozeni.*
+
+| Pole formuláře | Hodnota |
+|---|---|
+| Název kurzu (max. 120 znaků) | krátký název pro platformu (xx znaků) |
+| Tematický blok | podle 1.2 Blok |
+| Cílová skupina | podle 1.8 |
+| Obor | u obecného a průřezového kurzu „Neurčeno“ |
+| EQF úroveň | podle 1.2 |
+| Typ kurzu | podle 1.3 |
+| Povinnost kurzu | podle 1.2 (v testovací fázi lze nechat prázdné) |
+| KRAUU kompetence | podle sekce 7 |
+| Bloomova taxonomie | úrovně podle GOALS |
+| Průřezové obory | podle nabídky formuláře, jinak „Neurčeno“ |
+| Popis kurzu (max. 500 znaků) | viz ANOTACE |
+| Počet modulů (max. 12) | podle 1.8 |
+| Doporučená obtížnost | dvě nejbližší úrovně platformy podle úrovně kurzu (tabulka úrovní v `ciselniky.md`); vybere metodik |
+| Délka kurzu (minuty) | podle 1.2 Délka celkem |
+| Nahrát podklady | `<KOD>_<Nazev>_KURZ.md` (rešerše a pracovní soubory nenahrávat) |
 
 ---
 
@@ -40,17 +65,21 @@ Výstupy: [artefakt] — dokument s [výčtem toho, co obsahuje].
 | Blok | A / B / C / D / Z |
 | Verze kurzu | 1.0 |
 | Délka celkem (min) | 90 (5 × 15 min modul + 15 min capstone) |
-| Úroveň | Základní / Pokročilý |
+| Úroveň | Začátečník / Středně pokročilý / Pokročilý (zkušenost s AI, ne odbornost v oboru) |
 | Povinnost | Povinný / Doporučený / Volitelný |
 | EQF úroveň | 6 / 7 / 8 |
 | ECTS (orientační) | 0,1 |
 | Prerekvizity (kódy) | … |
 | Navazující kurzy (kódy) | … |
 | Typ kurzu | Obecný / Oborový / Průřezový / Vstupní kurz skupiny / Specializovaný |
-| Skip povolen? | Ano – deklarativní moduly M…, práh 80 %; M… a všechny F4 přeskočit nelze |
+| Skip povolen? | Ano – moduly se znalostními cíli (obj.know) M…, práh 80 %; M… a všechny F4 přeskočit nelze |
 | Při neúspěchu skip-testu | Uživatel prochází modul standardně |
 | Styl psaní | Konverzační (vykání) + narativní; analytický u evidence |
-| Typické rozložení fází (min) | F1: 5 · F2: 4 · F3: 3 · F4: 3 |
+| Typické rozložení fází (min) | F1: 5–10 podle úrovně a náročnosti · F2: 4 · F3: 3 · F4: 3 |
+| Cílové skupiny (1.8) | Akademik / Student / Mentor (jedna nebo více) |
+| Počet modulů (1.8) | n (max. 12) |
+| Minut na modul (1.8) | Délka celkem / počet modulů |
+| Úroveň pro generátor (1.8) | beginner / intermediate / advanced |
 
 **Anchor text:**
 *2–3 věty, vykání, pojmenovaný problém, bez KRAUU a žargonu.*
@@ -70,21 +99,21 @@ Absolvent/ka … (shrnutí GOALS jednou souvislou větou, slovesa 3. os. sg.).
 | X | 2 – Porozumět | **G2:** … | M1, M2 |
 | X | 4 – Analyzovat | **G4:** … | M2–M4 |
 | X | 5 – Hodnotit | **G5:** … | M3–M5 |
-| X | 6 – Tvořit | **G6:** … artefakt … | M1–M5 (F4), Capstone |
+| X | 6 – Tvořit | **G6:** … artefakt … | M1–Mn (F4), Capstone |
 
 ## 3 OBJECTIVES (cíle modulů)
 
 | ID | Text OBJECTIVE | Typ | Testovatelný? | Modul | Vazba na GOAL |
 |---|---|---|---|---|---|
-| X0000-O1 | … | znalostní | ano | M1 | G2 |
-| X0000-O2 | … | analytický | ano | M2 | G2, G4 |
+| X0000-O1 | … | obj.know | ano | M1 | G2 |
+| X0000-O2 | … | obj.anal, obj.eval | ano | M2 | G2, G4 |
 | … | | | | | |
 
 ## 4 Větvení dle profilu uživatele
 
-| Modul | Akademik | Mentor / uvádějící učitel | Student učitelství |
+| Modul | Akademik (vč. doktorandů) | Mentor (provázející učitel ZŠ/SŠ) | Student (Bc., Mgr.) |
 |---|---|---|---|
-| M1–M5 | … | … | … |
+| M1–Mn | … | … | … |
 | Capstone | … | … | … |
 
 ## 5 Neurovědní principy kurzu (globální výběr)
@@ -112,14 +141,17 @@ Zaškrtnuto: **x.y** (proč), …
 
 **Délka:** 15 min | **OBJECTIVES:** X0000-O1 | **Skip:** ano (80 %) | **Vazba na GOALS:** G2
 **Neurovědní principy v modulu:** NP-xx (fáze, jak), …
+**Náročnost tématu:** nízká / střední / vysoká | **Orientační rozsah F1:** n min (≈ … slov)
+**Průběžné hodnocení:** FMT-xxx, hodnotitel … (neovlivňuje badge)
+**Otevřené problémy pro metodika:** — *(typ – popis – řešení; před schválením kurzu prázdné)*
 
 ## IMPULS
 
 *Jedna věta nebo otázka. Překvapení, mýtus, situace z praxe. Nikdy definice.*
 
-## F1 PREZENTACE (5 min)
+## F1 PREZENTACE (n min)
 
-Kontextový odstavec (kde jsme, proč teď). Obsahový odstavec se zdroji (autor, rok, časopis; kalibrovaná jistota). Tučně zvýrazněné 2–4 klíčové body nebo mechanismy.
+Výklad ke čtení v rozsahu podle úrovně a náročnosti. Kontextový odstavec (kde jsme, proč teď). Obsahový odstavec se zdroji (autor, rok, časopis; obor, populace, typ studie; kalibrovaná jistota). Tučně zvýrazněné 2–4 klíčové body nebo mechanismy.
 
 *Zapamatujte si: jedna věta, praktický obraz nebo pravidlo.*
 
@@ -179,7 +211,7 @@ Uživatel vytvoří **Název sekce**: co přesně, v jakém rozsahu, s jakým zd
 
 ## 10 MEDIÁLNÍ PŘÍLOHY
 
-*Obrázky se na platformu vkládají ručně, proto má každá příloha přesný název a pozici. Název: `<KOD>-M<n>-<NN>-<typ>-<popis>.<ext>`, kde `<NN>` je pořadí přílohy v modulu podle výskytu v textu (01, 02 …); capstone `CAP`, úvod kurzu `M0`. V textu F1 stojí na místě obrázku řádek `> 🖼 **<název souboru>** — popis` s alt textem.*
+*Obrázky se na platformu vkládají ručně, proto má každá příloha přesný název a pozici. Název: `<KOD>-M<n>-<NN>-<typ>-<popis>.<ext>`, kde `<NN>` je pořadí přílohy v modulu podle výskytu v textu (01, 02 …); capstone `CAP`, úvod kurzu `M0`. Pořadí `<NN>` upřesňuje název podle Matrice v7.2 (list 10), která ho zatím neuvádí. Formáty PNG, SVG, MP3. V textu F1 stojí na místě obrázku řádek `> 🖼 **<název souboru>** — popis` s alt textem.*
 
 | Název souboru | Typ | Modul | Pozice (fáze a nadpis oddílu, za který obrázek patří) | Alt text / popis | Zdroj / licence | Schválil |
 |---|---|---|---|---|---|---|
@@ -199,6 +231,20 @@ Uživatel vytvoří **Název sekce**: co přesně, v jakém rozsahu, s jakým zd
 ## 12 Výzkumná poznámka
 
 Sledovaná proměnná, pre/post, co jde výzkumnému týmu.
+
+## 14 ZDROJOVÉ SOUBORY A JEJICH ROLE
+
+*Soubory nahrávané ke kurzu pro generátor (přijímá jen .md a .docx). Role: Obsah = učivo · Pravidla pro tvorbu = pokyny, QA report, zápis rozhovoru (neučí se z nich) · Hotový kurz = osnova ke konverzi.*
+
+| Název souboru | Formát | Role | Pro moduly | Co z něj brát | Ověřeno | Poznámka |
+|---|---|---|---|---|---|---|
+| … | md / docx | Obsah / Pravidla pro tvorbu / Hotový kurz | 1–n / Capstone / celý kurz | … | ano / ne / částečně | … |
+
+**Známé rozpory ve zdrojích**
+
+| Téma / tvrzení | Zdroj A říká | Zdroj B říká | Platné znění (rozhodnutí autora) |
+|---|---|---|---|
+| … | … | … | … |
 
 ---
 

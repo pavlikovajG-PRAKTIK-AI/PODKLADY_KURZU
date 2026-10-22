@@ -1,10 +1,10 @@
-# Definition of Done kurzu PRAKTIK-AI (z Protokolu rozhovoru s autorem, 10. 9. 2026)
+# Definition of Done kurzu PRAKTIK-AI (z Protokolu rozhovoru s autorem, verze 1.1, 18. 10. 2026)
 
 Kurz je hotový, když:
 
 1. Řešený problém, GOAL a artefakt jsou konzistentní a artefakt je použitelný ve výuce bez dalších úprav.
 2. Kurz obsahuje ≥ 3 autentické příklady autora a ≥ 1 explicitní limit / antipattern.
-3. Délka v limitu formátu; moduly 15–20 min; každý modul má cíl a kontrolu porozumění.
+3. Délka v limitu formátu; moduly obvykle 15–25 min, nejvýše 30 min; každý modul má cíl a kontrolu porozumění.
 4. Všechny nástroje, odkazy a citace ověřeny (existují, fungují, jsou aktuální k datu vydání).
 5. Pravidla používání AI pro účastníky jsou explicitní (co smí, co ne, jak deklarovat).
 6. Přístupnost: alternativní text k obrázkům, čitelnost, varianta bez zvuku a videa.

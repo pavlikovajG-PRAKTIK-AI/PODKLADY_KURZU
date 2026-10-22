@@ -29,7 +29,7 @@ Kurz (kód a název) · Verze / datum · Autor(ka) · Cílová skupina · Oponen
 
 ## D Celkový verdikt
 
-Doporučuji k nasazení bez úprav / Doporučuji s úpravami (viz B) / Nedoporučuji, nutné přepracování / Nedoporučuji, kurz nemá být realizován. Vhodný pro cílovou skupinu: akademici / studenti učitelství / mentoři / učitelé ZŠ/SŠ / vedení škol. Odhad reálné délky (min). Doporučení oponenta 2. čtení či testera.
+Doporučuji k nasazení bez úprav / Doporučuji s úpravami (viz B) / Nedoporučuji, nutné přepracování / Nedoporučuji, kurz nemá být realizován. Vhodný pro cílovou skupinu: Akademik (vč. doktorandů) / Student (Bc., Mgr.) / Mentor (provázející učitel ZŠ/SŠ). Odhad reálné délky (min). Doporučení oponenta 2. čtení či testera.
 
 ## Příloha: dotazník pro testera (5 minut po dokončení)
 
@@ -39,3 +39,5 @@ Doporučuji k nasazení bez úprav / Doporučuji s úpravami (viz B) / Nedoporu�
 4. Kde jste chtěli odejít a proč jste (ne)odešli?
 5. Jedna věta, kterou byste kurz doporučili kolegovi (nebo nedoporučili).
 6. Užitečnost 1–5 · srozumitelnost 1–5 · délka: krátký / přiměřený / dlouhý.
+
+*Úprava kopie 18. 10. 2026: cílové skupiny v části D podle Matrice kurzu v7.2 (CIS_Skupiny), dříve akademici / studenti učitelství / mentoři / učitelé ZŠ/SŠ / vedení škol. Originál formuláře z 10. 9. 2026 se touto úpravou nemění.*

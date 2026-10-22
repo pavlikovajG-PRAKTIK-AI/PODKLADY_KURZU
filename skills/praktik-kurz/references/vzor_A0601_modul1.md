@@ -4,6 +4,8 @@ Referenční výstup skillu. Ukazuje hlavičku kurzu (sekce 1–8), kompletní m
 
 Čti jen pasáž, kterou právě potřebuješ: hlavičku před psaním kostry, modul 1 před psaním prvního modulu, rubriku před psaním rubriky.
 
+> **Vzor vznikl podle Matrice v6.0.** Strukturu a styl převezměte; podle platné Matrice v7.2 se liší: úroveň má tři stupně (Začátečník / Středně pokročilý / Pokročilý, zkušenost s AI), F1 trvá 5–10 min podle úrovně a náročnosti tématu, cílové skupiny se jmenují Akademik / Student / Mentor, typy OBJECTIVES mají kódy `obj.*` (šest typů), formáty FMT-OTA a FMT-PRO se jmenují FMT-PRB a FMT-DVL a přibyly blok 0.2, oddíl 1.8, pole modulu (náročnost tématu, rozsah F1, průběžné hodnocení, otevřené problémy pro metodika) a sekce 14. Platí `sablona_kurzu.md`, ne tento vzor.
+
 ---
 
 # VÝVOJ DĚTSKÉHO MOZKU V ÉŘE AI

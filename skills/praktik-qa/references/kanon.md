@@ -1,6 +1,6 @@
 # Kánon PRAKTIK-AI: závazná pravidla pro tvorbu kurzu
 
-Projekt TQ23000092 PRAKTIK-AI (UJEP + OU). Platforma vzdělává akademiky, studenty učitelství, mentory, učitele ZŠ/SŠ a vedení škol v AI gramotnosti. Tento soubor shrnuje, co musí každý kurz splňovat. Podrobnosti a kódy jsou v `ciselniky.md`, konkrétní kurzy v `katalog_kurzu.md`, hotový vzor v `vzor_A0601_modul1.md`.
+Projekt TQ23000092 PRAKTIK-AI (UJEP + OU). Platforma vzdělává v AI gramotnosti akademiky (vč. doktorandů), studenty (Bc., Mgr., zejména učitelství) a mentory (provázející učitele ZŠ/SŠ). Platí Matrice kurzu v7.2. Tento soubor shrnuje, co musí každý kurz splňovat. Podrobnosti a kódy jsou v `ciselniky.md`, konkrétní kurzy v `katalog_kurzu.md`, hotový vzor v `vzor_A0601_modul1.md`.
 
 ## 1 Terminologie (závazná, nezaměňovat)
 
@@ -8,54 +8,56 @@ Projekt TQ23000092 PRAKTIK-AI (UJEP + OU). Platforma vzdělává akademiky, stud
 |---|---|---|
 | KURZ | ucelený celek: identifikace, GOALS, M0 skip, 1–12 modulů, capstone, ARTEFAKT | „lekce“, „školení“ |
 | GOALS | výkonové cíle kurzu podle Blooma (3. os. sg., sloveso + objekt + podmínka) | „cíle kurzu“, „výsledky učení“ |
-| OBJECTIVES | dílčí cíle modulu, ID `KÓD-Onn` (např. A0601-O3), 1–3 na modul | „VL“, „dílčí cíle“ |
+| OBJECTIVES | dílčí cíle modulu, ID `KÓD-Onn` (např. A0601-O3), 1–3 na modul, typ podle číselníku platformy (`obj.*`) | „VL“, „dílčí cíle“ |
 | IMPULS | úvodní věta nebo otázka modulu, překvapení, mýtus, situace z praxe | „vstupní hák“, „úvod“ |
-| F1 PREZENTACE | výklad, max. 5 min čtení, začíná IMPULSEM | „expozice“, „výklad“ |
+| F1 PREZENTACE | výklad ke čtení („příručka“), 5–10 min podle úrovně a náročnosti tématu, začíná IMPULSEM | „expozice“, „výklad“ |
 | F2 PROCVIČENÍ | aktivita s AI jako partnerem, výchozí formát dialogický | „aktivita“, „cvičení“ |
 | F3 OVĚŘENÍ | 2–4 položky ověřující OBJECTIVES modulu + 1 metakognitivní otázka | „test“, „kvíz“ |
 | F4 APLIKACE | tvorba jedné sekce ARTEFAKTU, nelze přeskočit | „projekt“, „tvorba“ |
 | ARTEFAKT | výstup kurzu skládaný po sekcích ve F4, jde do portfolia, případně do databáze S | „výstup“, „produkt“ |
 | CAPSTONE | závěrečný modul: varianta A (zjednodušený F1–F4) nebo B (jen finální ověření rubrikou) | „závěr“ |
-| SKIP-TEST | vstupní test modulu, práh 80 %, jen deklarativní obsah | „pretest“ |
+| SKIP-TEST | vstupní test modulu, práh 80 %, jen znalostní obsah (`obj.know`) | „pretest“ |
 | Anchor text | 2–3 věty pro uživatele, pojmenuje problém, vykání, žádné KRAUU ani akademický žargon | |
 | Informační nota | prerekvizity, cílová skupina, zařazení v kurikulu | |
 
-V textech pro uživatele pište „Modul 1“ celým slovem; kódy M1–M5 a F1–F4 patří do matrice a instrukcí pro agenta.
+V textech pro uživatele pište „Modul 1“ celým slovem; kódy M1–M12 a F1–F4 patří do matrice a instrukcí pro agenta.
 
 ## 2 Struktura kurzu
 
 ```
+0 ZALOŽENÍ (0.1 hlavička podkladu; ANOTACE; 0.2 údaje pro formulář platformy)
 1 IDENTIFIKACE (kód DB, kód UI, slug, název pro certifikát, řešený problém, artefakt,
   blok, verze, délka, úroveň, povinnost, EQF, ECTS, prerekvizity, navazující kurzy,
   typ kurzu, anchor text, informační nota, skip pravidla, styl a tón, rozložení fází,
-  text certifikátu)
+  text certifikátu; 1.8 cílové skupiny, počet modulů, minut na modul, úroveň pro generátor)
 2 GOALS (Bloom 2–6, pokrytí moduly)
 3 OBJECTIVES (ID, text, typ, testovatelný, modul, vazba na GOAL)
 4 Větvení dle profilu (akademik / mentor / student)
 5 Neurovědní principy kurzu (kódy NP)      6 AI principy kurzu
 7 KRAUU kompetence (interní)                8 Vzory a antipatterns pro agenta
-MODUL 1–5: hlavička · IMPULS · F1 · F2 · F3 · F4
+MODUL 1–n (max. 12): hlavička (vč. náročnosti tématu, rozsahu F1, průběžného hodnocení
+  a otevřených problémů pro metodika) · IMPULS · F1 · F2 · F3 · F4
 CAPSTONE (A nebo B)
 9 ARTEFAKT (definice + šablona povinných sekcí; každá sekce vzniká v právě jednom F4, nikdy
   ve dvou; sekcí = modulů + 1 úvodní sekce z capstone)
 11 RUBRIKA 5 × 5 (závazné názvy úrovní, váhy, práh badge 75 %, routing)
 12 Výzkumná poznámka
+14 Zdrojové soubory a jejich role (+ známé rozpory ve zdrojích)
 Procvičovací test (volitelný) · Závěrečný test (finální ověření, práh 75 %)
 ZDROJE (ověřeno k datu)
 ```
 
 ## 3 Časy a rozsahy
 
-- Kurz 60–105 min, mikrokurz 30–45 min, pilotní kurz ZŠ 120 min. Délka celkem = součet modulů + capstone.
-- Modul 15–20 min (tvrdý strop 30 min). Typické rozložení: F1 5 · F2 4 · F3 3 · F4 3.
+- Délka kurzu podle katalogu a formátu (kurz, mikrokurz 30–45 min, pilotní kurz ZŠ 120 min). Délka celkem = součet modulů + capstone.
+- Modul obvykle 15–25 min (tvrdý strop 30 min; Matrice v7.2, list M1). Typické rozložení: F1 5–10 podle úrovně · F2 4 · F3 3 · F4 3.
 - Délka modulu se při tvorbě nastavuje jako pevná podle plánu modulů; při kontrole modulů a finální úpravě kurzu se smí lišit až o ±5 min. Délka je významná, ale rozhoduje vždy kvalita obsahu a metodika kurzu (pokyn J. Pavlíkové, 18. 10. 2026).
-- F1 nikdy přes 5 min čtení, tedy zhruba 250–400 slov. Jeden modul = jeden jasný poznatek.
-- Max. 5 obsahových modulů. Modul 1 = proč je to problém, moduly 2–4 = obsah od jednoduššího ke složitějšímu, modul 5 = aplikace a reflexe.
-- Rozsah jednoho vygenerovaného modulu v chatu: max. 2 normostrany (3 600 znaků) bez tabulek.
+- F1 trvá 5–10 min čtení (130 slov/min) podle úrovně kurzu a náročnosti tématu: Začátečník 5–6 min (600–850 slov), Středně pokročilý 7–8 min (850–1 100 slov), Pokročilý 9–10 min (1 100–1 400 slov); přesná tabulka v `ciselniky.md`. Jeden modul = jeden jasný poznatek.
+- Nejvýše 12 obsahových modulů (Matrice v7.2, 1.8). První modul = proč je to problém, prostřední moduly = obsah od jednoduššího ke složitějšímu, poslední modul = aplikace a reflexe.
 
 ## 4 Politika hodnocení: AI je partner, ne hlídač
 
-- Výchozí formát F2 je dialogický: FMT-SOK, FMT-VLA, FMT-PRO, FMT-OTA, FMT-MIK. Uzavřené formáty (FMT-MCQ, FMT-TF, FMT-MTC, FMT-SA) patří do F3 tam, kde se ověřuje faktografie, a do skip-testů.
+- Výchozí formát F2 je dialogický: FMT-SOK, FMT-VLA, FMT-DVL, FMT-PRB, FMT-MIK. Uzavřené formáty (FMT-MCQ, FMT-TF, FMT-MTC, FMT-SA) patří do F3 tam, kde se ověřuje faktografie, a do skip-testů.
 - Každý modul má alespoň jednu otevřenou nebo reflexivní položku („Zamyslete se…“, „Formulujte vlastními slovy…“). Kurz složený jen z uzavřených položek je chyba.
 - F3 končí metakognitivní otázkou (co překvapilo, co bylo nejtěžší, jak jistě tomu rozumím).
 - F4 vždy uvádí roli AI (konzultant, zrcadlo, partner) a co AI nesmí: nepřepisuje text za uživatele.
@@ -64,15 +66,17 @@ ZDROJE (ověřeno k datu)
 
 ## 5 Neurovědní principy
 
-Vyber 4–12 principů z NP-01 až NP-20 pro kurz, u každého modulu 2–5 s určením fáze. Principy nepojmenovávej uživateli, zabuduj je: vybavení bez opory (NP-03), návrat pojmu v jiném modulu jinak (NP-02), „proč“ místo „co“ (NP-08), vlastní verze před vzorem (NP-09), obraz nebo schéma v F1 (NP-06), F1 do 5 min (NP-07), záměrně obtížnější položka (NP-04), reflexe na konci (NP-15), vazba na vlastní praxi, ukotvení v situaci z praxe. IMPULS stavěj na překvapení (NP-11).
+Vyber 4–12 principů z NP-01 až NP-20 pro kurz, u každého modulu 2–5 s určením fáze. Principy nepojmenovávej uživateli, zabuduj je: vybavení bez opory (NP-03), návrat pojmu v jiném modulu jinak (NP-02), „proč“ místo „co“ (NP-08), vlastní verze před vzorem (NP-09), obraz nebo schéma v F1 (NP-06), F1 v rozsahu podle úrovně (NP-07), záměrně obtížnější položka (NP-04), reflexe na konci (NP-15), vazba na vlastní praxi, ukotvení v situaci z praxe. IMPULS stavěj na překvapení (NP-11) jako na didaktické volbě; kurz netvrdí, že překvapení zlepší zapamatování (přenos na výuku není doložen, Matrice v7.2, CIS_Neuroveda).
 
 ## 6 Jazyk a styl
 
 - Výhradně vykání, i v anchor textu, IMPULSU a instrukcích pro agenta.
-- Rejstřík zhruba 80/20 populárně-akademický: terminologie přímo, bez omluvných parafráz; tvrzení nesou zdroj (autor, rok, časopis) a kalibrovanou jistotu (preprint ≠ RCT ≠ metaanalýza), přímo v textu.
+- Rejstřík zhruba 80/20 populárně-akademický: terminologie přímo, bez omluvných parafráz; tvrzení nesou zdroj (autor, rok, časopis), kontext (obor, populace, typ studie) a kalibrovanou jistotu (preprint ≠ RCT ≠ metaanalýza), přímo v textu.
 - Jména v příkladech česká, v jednom kurzu střídat; zakázána cizí jména (zejména Natalia). Obory v příkladech humanitní (dějepis, psychologie, pedagogika, filozofie, sociologie, čeština, dějiny umění, etika), střídat; zakázány právo, biologie, ekonomie, medicína, informatika, obchodní komunikace, pokud nejde o oborový kurz daného předmětu.
 - Anchor text: konkrétní problém, přímý, trochu provokativní, bez floskulí. Nikdy „V tomto kurzu se naučíte…“.
-- Názvy modulů akční a konkrétní: „Proč X nestačí“, ne „Úvod do X“.
+- Názvy modulů akční a konkrétní: „Proč X nestačí“, ne „Úvod do X“. Název, nadpis i další formulace pro účastníka vyjadřují, co účastník rozhoduje nebo čeho dosahuje, ne úkon s nástrojem: „Detail, nebo kontext“, ne „Ptát se jednoho, nebo všech“. Test: když název lze nahradit pokynem ke kliknutí, je příliš zjednodušený. Jazyk spisovný, ne hovorový (Matrice v7.2, 0_Návod).
+- Text pro účastníka odpovídá profilu úrovně kurzu a oslovení cílových skupin (`ciselniky.md`: Úrovně pokročilosti, Cílové skupiny).
+- Nejasnosti a hlášení pro metodika patří do pole „Otevřené problémy pro metodika“ v hlavičce modulu, nikdy do textu pro účastníky.
 - Žádný AI balast a žádná zakázaná věta: řiď se oddílem 6 „Věty, které nikdy nezazní“ v `systemova_pravidla.md` (osm skupin: prázdné smíření, strašení, marketing, věty odnaučované samotným kurzem, rozpor se směrnicí, didaktické prázdno, balast, falešná blízkost). Na každou napsanou větu použij tři testy z oddílu 6.9: zaměnitelnost, vlastní pravidlo, doložitelnost.
 - Jedna metafora na koncept, metafora doprovází termín, nikdy ho nenahrazuje; návratové schéma kurzu (NP-20).
 - Neexplicitní KRAUU: kódy kompetencí nikdy v textu pro uživatele.
@@ -100,7 +104,7 @@ Vyber 4–12 principů z NP-01 až NP-20 pro kurz, u každého modulu 2–5 s ur
 - Složka kurzu: `09_Kurzy/<Kód><NázevBezMezer>/`, např. `A0601VyvojDetskehoMozku/`. Cesta je uvedená vůči kořeni projektu; když už je složka kurzu otevřená jako pracovní, soubory patří přímo do ní.
 - Kurz: `<KOD>_<NazevBezDiakritiky>_KURZ.md`, export `<KOD>_<Nazev>_KURZ.docx` (výstupy projektu jsou vždy docx, ne PDF).
 - Rozhovor: `<KOD>_Rozhovor.md`. QA report: `<KOD>_QA_report.md`.
-- Mediální přílohy: `<KOD>-M<n>-<NN>-<typ>-<popis>.<ext>` (svg, png, mp3, mp4), kde `<NN>` je dvoumístné pořadí přílohy v daném modulu podle výskytu v textu (01, 02 …); capstone `CAP`, úvod kurzu `M0`. Příklad: `A01-M2-01-grafika-pritakavani-komiks.png`. Obrázky se na platformu vkládají ručně, proto má každá příloha v sekci 10 i přesnou pozici: modul, fáze a nadpis oddílu, za jehož text patří (pokyn J. Pavlíkové, 18. 10. 2026).
+- Mediální přílohy: `<KOD>-M<n>-<NN>-<typ>-<popis>.<ext>` (png, svg, mp3; mp4 jen mimo platformu, video platforma zatím nepodporuje), kde `<NN>` je dvoumístné pořadí přílohy v daném modulu podle výskytu v textu (01, 02 …); capstone `CAP`, úvod kurzu `M0`. Příklad: `A01-M2-01-grafika-pritakavani-komiks.png`. Obrázky se na platformu vkládají ručně, proto má každá příloha v sekci 10 i přesnou pozici: modul, fáze a nadpis oddílu, za jehož text patří (pokyn J. Pavlíkové, 18. 10. 2026).
 - Kód DB = písmeno + 4 číslice (A0601), kód UI = katalogový (A6), slug bez diakritiky s pomlčkami.
 - V hlavičce kurzu vždy: verze, datum, autor podkladu, poznámka „K potvrzení garantem“ s otevřenými body.
 - Dedikace: „Vzniklo v projektu TQ23000092 PRAKTIK-AI (TA ČR, program SIGMA).“

@@ -1,8 +1,8 @@
 # Skilly PRAKTIK-AI v kartě Code v Claude Desktop: návod pro metodičky a metodiky
 
-Verze 1.4 | 19. 9. 2026 | Projekt TQ23000092 PRAKTIK-AI
+Verze 1.5 | 18. 10. 2026 | Projekt TQ23000092 PRAKTIK-AI
 
-Skill je balíček instrukcí, který Claude načte, když ho potřebuje. Místo dlouhého promptu a hromady dokumentů v projektu máte pět malých skillů, které znají katalog kurzů, matrici v6, číselníky, vzorový kurz A0601 a Definition of Done. Nainstalujete je jednou, používáte v každém kurzu.
+Skill je balíček instrukcí, který Claude načte, když ho potřebuje. Místo dlouhého promptu a hromady dokumentů v projektu máte šest malých skillů, které znají katalog kurzů, Matrici v7.2, číselníky, vzorový kurz A0601 a Definition of Done. Nainstalujete je jednou, používáte v každém kurzu.
 
 | Skill | Co dělá | Kdy ho zavoláte |
 |---|---|---|
@@ -11,6 +11,7 @@ Skill je balíček instrukcí, který Claude načte, když ho potřebuje. Místo
 | praktik-kurz | vygeneruje kurz: nejdřív kostru, pak moduly | máte zadání a zdrojový text |
 | praktik-qa | zkontroluje kurz proti Definition of Done a formuláři oponenta | před odesláním oponentovi |
 | praktik-export | vyrobí Word v domácím stylu | kurz je schválený |
+| kontrola-kurzu | zkontroluje kurz vygenerovaný platformou proti KURZ.md a zdrojům | kurz je na platformě, před odesláním ke schválení |
 
 ## Co potřebujete
 
@@ -32,7 +33,7 @@ Pracujeme výhradně v kartě Code: Claude tam čte a upravuje soubory přímo v
 2. Vybraná složka je Claudův pracovní prostor: soubory kurzu v ní vznikají a upravují se rovnou. Na cokoli mimo ni se Claude ptá na svolení, takže se sám nedostane ke zbytku disku.
 3. Do řádku napište zadání a přiložte zdrojový text jako soubor (PDF článku, kapitola), například:
 
-   > Použij skill praktik-kurz. Kurz C1.5 Literatura: interpretace, rozhovor s autorem a jeho limity. Cílová skupina učitelé ČJ na SŠ. Tři situace z praxe: …
+   > Použij skill praktik-kurz. Kurz C1.5 Literatura: interpretace, rozhovor s autorem a jeho limity. Cílová skupina Mentor (provázející učitel ČJ na SŠ), úroveň Středně pokročilý. Tři situace z praxe: …
 
    Claude načte skill a začne kostrou kurzu. Když skill nezmíníte, Claude ho zpravidla vybere sám podle zadání; když ne, napište jeho název do zprávy (nebo rovnou `/praktik`). Kurz vzniká jako soubor `<KOD>_<Nazev>_KURZ.md` ve zvolené složce.
 4. Pro Word napište „exportuj do docx“; Claude použije skill praktik-export a soubor uloží vedle `.md`.
@@ -56,7 +57,7 @@ Když se skilly změní, dostanete novou složku `PODKLADY_KURZU` (nebo jen pods
 | Kartu Code v Claude Desktop nevidím | Ověřte, že máte placený tarif (Pro, Max, Team nebo Enterprise) a aktuální verzi aplikace |
 | `install_skills.ps1` / `Nainstalovat_skilly.cmd` se nespustí | Zkuste druhý ze souborů — `.cmd` funguje dvojklikem v libovolném správci souborů, `.ps1` jen v Průzkumníku přes „Spustit v PowerShellu“ |
 | Na kartě Code `/praktik` nic nenabízí | Zkontrolujte, že existuje soubor `C:\Users\<jméno>\.claude\skills\praktik\SKILL.md`; když existuje, otevřete novou relaci |
-| V Settings → Skills vidím jen některé skilly | Ten seznam ukazuje skilly nahrané do účtu Claude (pro chat), ne složku na disku, ze které čte karta Code. Instalaci ověřte v kartě Code: napište / a v nabídce musí být všech pět praktik* |
+| V Settings → Skills vidím jen některé skilly | Ten seznam ukazuje skilly nahrané do účtu Claude (pro chat), ne složku na disku, ze které čte karta Code. Instalaci ověřte v kartě Code: napište / a v nabídce musí být všech pět praktik* a kontrola-kurzu |
 | Claude skill nepoužil | Napište název skillu do zprávy („použij skill praktik-kurz“) |
 | Kurz vzniká v jiné struktuře než A0601 | Skill nebyl načten; ověřte, že soubory jsou v `C:\Users\<jméno>\.claude\skills\`, a začněte novou relaci |
 | Export do docx skončí hláškou „Chybí python-docx“ | Nechte Clauda spustit `pip install python-docx` a export zopakujte |

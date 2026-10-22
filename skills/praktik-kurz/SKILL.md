@@ -1,6 +1,6 @@
 ---
 name: praktik-kurz
-description: Vygeneruje kompletní kurz pro platformu PRAKTIK-AI (TQ23000092) ze zdrojového textu a zadání autora – ve struktuře Matrice v6 (IDENTIFIKACE, GOALS, OBJECTIVES, moduly IMPULS + F1–F4, capstone, artefakt, rubrika, zdroje), nejdřív kostru ke schválení, pak moduly po jednom. Použij, když metodik/metodička chce „vytvořit kurz“, „zpracovat článek/PDF jako kurz“, „napsat moduly“, „přidat modul“, „přepsat kurz do matrice“, mluví o kódu kurzu z katalogu (A6, B2, C1.5, Z2…) nebo o kurzu PRAKTIK-AI. Pro rozhovor s autorem před tvorbou použij praktik-rozhovor, pro kontrolu praktik-qa, pro export praktik-export.
+description: Vygeneruje kompletní kurz pro platformu PRAKTIK-AI (TQ23000092) ze zdrojového textu a zadání autora – ve struktuře Matrice v7.2 (ZALOŽENÍ, IDENTIFIKACE, GOALS, OBJECTIVES, moduly IMPULS + F1–F4, capstone, artefakt, rubrika, zdroje), nejdřív kostru ke schválení, pak moduly po jednom. Použij, když metodik/metodička chce „vytvořit kurz“, „zpracovat článek/PDF jako kurz“, „napsat moduly“, „přidat modul“, „přepsat kurz do matrice“, mluví o kódu kurzu z katalogu (A6, B2, C1.5, Z2…) nebo o kurzu PRAKTIK-AI. Pro rozhovor s autorem před tvorbou použij praktik-rozhovor, pro kontrolu praktik-qa, pro export praktik-export.
 ---
 
 # praktik-kurz: tvorba kurzu PRAKTIK-AI
@@ -30,13 +30,13 @@ Když kód v katalogu neexistuje, napiš to a navrhni nejbližší kód nebo pra
 
 Napiš do chatu a ulož jako `<KOD>_<Nazev>_KURZ.md` pouze:
 
-1. Hlavičku, **pracovní ANOTACI** (blok před sekcí 1, pravidla v `systemova_pravidla.md` oddíl 7) a sekci 1 IDENTIFIKACE včetně anchor textu, informační noty a textu certifikátu. Anotaci v kostře označ jako pracovní — dopřesníš ji podle hotových modulů v kroku 4.
+1. Hlavičku (0.1), **pracovní ANOTACI** (blok před sekcí 1, pravidla v `systemova_pravidla.md` oddíl 7), blok 0.2 Údaje pro založení kurzu na platformě a sekci 1 IDENTIFIKACE včetně oddílu 1.8, anchor textu, informační noty a textu certifikátu. Úroveň (zkušenost účastníka s AI: Začátečník / Středně pokročilý / Pokročilý) a cílové skupiny (Akademik / Student / Mentor) navrhni, autor je potvrdí. Anotaci v kostře označ jako pracovní — dopřesníš ji podle hotových modulů v kroku 4.
 2. GOALS (3–4, Bloom 2 až 6, poslední vždy „Tvořit“ a míří na artefakt).
-3. OBJECTIVES (1–3 na modul, ID `<KOD>-Onn`, typ, testovatelnost, vazba).
+3. OBJECTIVES (1–3 na modul, ID `<KOD>-Onn`, typ s kódem `obj.*` podle `ciselniky.md`, testovatelnost, vazba).
 4. Blueprint artefaktu: tabulka povinných sekcí a v kterém F4 vznikají. Součet sekcí = počet modulů + úvod v capstone; každá sekce vzniká v právě jednom F4. Když zadání z rozhovoru obsahuje víc položek, neslučuj je sám: napiš návrh sloučení do kostry a nech autora rozhodnout.
-5. Názvy modulů, IMPULSY a plán formátů (F2 dialogický formát, F3 formáty, F4 sekce) v jedné tabulce.
+5. Názvy modulů, náročnost tématu (nízká / střední / vysoká), délka F1, IMPULSY a plán formátů (F2 dialogický formát, F3 formáty, F4 sekce) v jedné tabulce. Název modulu vyjadřuje, co účastník rozhoduje nebo čeho dosahuje, ne úkon s nástrojem, a je formulován spisovně (Matrice v7.2, 0_Návod).
 6. Globální výběr NP, AI principů a KRAUU; návrh 4–8 vzorů a antipatternů pro agenta.
-7. Seznam zdrojů, které ze zdrojového textu použiješ, a co v něm chybí (nutno dohledat).
+7. Sekci 14 Zdrojové soubory: soubory ke kurzu s formátem (md, docx), rolí (Obsah / Pravidla pro tvorbu / Hotový kurz), moduly, pro které platí, a stavem ověření; co ve zdrojích chybí (nutno dohledat). Rozpory mezi zdroji zapiš do tabulky „Známé rozpory ve zdrojích“ a nech je rozhodnout autora.
 
 Ukonči otázkou, co autor mění. Nepokračuj bez souhlasu. Přepracování kostry je levné, přepracování modulů drahé.
 
@@ -44,12 +44,14 @@ Ukonči otázkou, co autor mění. Nepokračuj bez souhlasu. Přepracování kos
 
 Po schválení generuj modul 1, čekej na zpětnou vazbu, pak další (autor může říct „další dva“). Každý modul podle šablony:
 
-- **Hlavička:** délka, OBJECTIVES, skip, vazba na GOALS, NP kódy s fázemi.
+- **Hlavička:** délka, OBJECTIVES, skip, vazba na GOALS, NP kódy s fázemi, náročnost tématu, orientační rozsah F1, průběžné hodnocení (formát, hodnotitel) a otevřené problémy pro metodika.
 - **IMPULS:** jedna věta nebo otázka, překvapení nebo situace z praxe autora, kurzívou. Nikdy definice ani „V tomto modulu…“.
-- **F1 PREZENTACE (max. 5 min, 250–400 slov):** kontext → mechanismus se zdroji (autor, rok, časopis, kalibrovaná jistota) → kurzívní „Zapamatujte si“. Tučně 2–4 klíčové body. Jedna metafora na koncept, návratové schéma kurzu. Zakonči řádkem **Větvení:** akademik / mentor / student.
-- **F2 PROCVIČENÍ (3–5 min):** jeden dialogický nebo aplikační formát (FMT-SOK, FMT-VLA, FMT-PRO, FMT-OTA, FMT-MIK; FMT-MTC jen u znalostních cílů). Kurzívou instrukce pro agenta: co nevyzradit, jak vyhodnotit, max. výměn. Alespoň jeden modul kurzu použije autentickou situaci autora jako startovní scénář.
+- **F1 PREZENTACE (5–10 min podle úrovně kurzu a náročnosti tématu; rozsah slov podle tabulky úrovní v `ciselniky.md`):** výklad ke čtení. Kontext → mechanismus se zdroji (autor, rok, časopis; obor, populace a typ studie; kalibrovaná jistota) → kurzívní „Zapamatujte si“. Tučně 2–4 klíčové body. Jedna metafora na koncept, návratové schéma kurzu. Zakonči řádkem **Větvení:** akademik / mentor / student.
+- **F2 PROCVIČENÍ (3–5 min):** jeden dialogický nebo aplikační formát (FMT-SOK, FMT-VLA, FMT-DVL, FMT-PRB, FMT-MIK; FMT-MTC jen u znalostních a analytických cílů). Kurzívou instrukce pro agenta: co nevyzradit, jak vyhodnotit, max. výměn. Alespoň jeden modul kurzu použije autentickou situaci autora jako startovní scénář.
 - **F3 OVĚŘENÍ (3 min):** 2–3 položky, jen tolik uzavřených, kolik ověřuje faktografii, vždy se správnou odpovědí a zdůvodněním; poslední položka metakognitivní. Distraktory smysluplné, žádné „všechny odpovědi jsou správné“.
 - **F4 APLIKACE (3 min):** konkrétní sekce artefaktu podle blueprintu, formulovaná jako instrukce („Doplňte do svého dokumentu sekci X, která obsahuje Y“), s rolí AI a s tím, co AI nesmí.
+- Výklad i otázky F3 piš podle profilu úrovně kurzu (`ciselniky.md`, Úrovně pokročilosti).
+- Co nevíš nebo co je sporné, zapiš do pole „Otevřené problémy pro metodika“ v hlavičce modulu, nikdy do textu pro účastníky.
 - Zkontroluj součet minut fází = délka modulu.
 
 Každý modul má alespoň jednu otevřenou nebo reflexivní položku. Klíčový pojem z modulu n se vrátí v modulu n+2 jinou formou (NP-02).
@@ -62,7 +64,7 @@ Po posledním modulu vygeneruj capstone (varianta A nebo B podle rozhodnutí aut
 
 Ulož celý kurz jako `<KOD>_<Nazev>_KURZ.md` do složky kurzu (konvence v kánonu, sekce 9). Když je jako Project folder otevřená přímo složka kurzu, ukládej do ní; když je otevřená `09_Kurzy`, použij nebo založ podsložku `<Kód><NázevBezMezer>`. Uvnitř už otevřené složky kurzu nikdy nezakládej další `09_Kurzy/`.
 
-**Dopřesni ANOTACI podle hotových modulů a vypiš ji do chatu** jako samostatný blok ke zkopírování — potřebuje ji člověk, který kurz zakládá na platformě, a má ji mít hned po ruce, ne ji hledat v souboru. Pravidla: `systemova_pravidla.md`, oddíl 7 — nejvýše 500 znaků, jedna věta o tom, pro koho kurz je, pak `Témata:` a `Výstupy:`, neosobně, **bez délky, počtu modulů, oslovení, sloganu a příslibů**. Uveď pod ní počet znaků.
+**Dopřesni ANOTACI podle hotových modulů a vypiš ji do chatu** jako samostatný blok ke zkopírování — potřebuje ji člověk, který kurz zakládá na platformě, a má ji mít hned po ruce, ne ji hledat v souboru. Pravidla: `systemova_pravidla.md`, oddíl 7 — nejvýše 500 znaků, jedna věta o tom, pro koho kurz je, pak jedna až dvě věty o obsahu v širších celcích (bez výčtu témat a názvů modulů) a `Výstupy:`, neosobně, **bez délky, počtu modulů, oslovení, sloganu a příslibů**. Uveď pod ní počet znaků.
 
 Pak nabídni:
 - `praktik-qa` (kontrola vůči Definition of Done a formuláři oponenta),
@@ -71,7 +73,7 @@ Pak nabídni:
 
 ## Pravidla psaní (zkratka kánonu)
 
-Vykání. Česká jména, humanitní obory v příkladech, střídat. Žádný AI balast, žádné katastrofické ani bagatelizující věty o AI. KRAUU jen v sekci 7. Terminologie jen z kánonu (GOALS, OBJECTIVES, IMPULS, F1–F4, ARTEFAKT). Zdroje jen ověřitelné; když nelze ověřit, řekni to. Kurz mluví o kategoriích nástrojů, ne o produktech.
+Vykání. Oslovení a označení cílových skupin podle `ciselniky.md` (Cílové skupiny). Česká jména, humanitní obory v příkladech, střídat. Žádný AI balast, žádné katastrofické ani bagatelizující věty o AI. KRAUU jen v sekci 7. Terminologie jen z kánonu (GOALS, OBJECTIVES, IMPULS, F1–F4, ARTEFAKT). Zdroje jen ověřitelné; když nelze ověřit, řekni to. Kurz mluví o kategoriích nástrojů, ne o produktech.
 
 ## Šetření tokenů
 
