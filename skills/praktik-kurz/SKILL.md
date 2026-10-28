@@ -16,11 +16,14 @@ Cíl: z podkladů autora vznikne kurz, který projde kontrolou `praktik-qa` bez 
 | `references/katalog_kurzu.md` | jen řádek zadaného kurzu a jeho prerekvizit (hledej podle kódu), plus vlnu |
 | `references/ciselniky.md` | při výběru NP, FMT, KRAUU, typu artefaktu; tabulku otevři, kód opiš |
 | `references/sablona_kurzu.md` | před psaním kostry |
+| `references/grafika.md` (+ `grafika_zaklad.py`) | na začátku každého kurzu oddíl 0 (připomínka palety platformy); při návrhu grafiky v kostře a při jejím vykreslení celý |
 | `references/vzor_A0601_modul1.md` | před prvním modulem (jen část „MODUL 1“), před rubrikou (jen část „RUBRIKA“) |
 
 Nečti celý vzor ani celý katalog do kontextu. Zdrojový text autora čti celý, ale nevracej ho do chatu; pracuj s výpisky.
 
 ## Krok 0: vstupní kontrakt
+
+Nejdřív otevři `references/grafika.md`, oddíl 0. Pokud paleta a identifikace platformy stále „čekají na J. Pavlíkovou“, připomeň jí to v první odpovědi jednou větou.
 
 Ověř, že máš pět vstupů z kánonu (kód kurzu a cílová skupina, řešený problém, artefakt, tři autentické situace, zdrojový text). Chybí-li víc než jeden, nabídni `praktik-rozhovor`. Chybí-li jeden, zeptej se jen na něj a vysvětli jednou větou, proč ho potřebuješ. Tři autentické situace si nikdy nevymýšlej; bez nich označ moduly jako „čeká na příklady autora“.
 
@@ -37,6 +40,8 @@ Napiš do chatu a ulož jako `<KOD>_<Nazev>_KURZ.md` pouze:
 5. Názvy modulů, náročnost tématu (nízká / střední / vysoká), délka F1, IMPULSY a plán formátů (F2 dialogický formát, F3 formáty, F4 sekce) v jedné tabulce. Název modulu vyjadřuje, co účastník rozhoduje nebo čeho dosahuje, ne úkon s nástrojem, a je formulován spisovně (Matrice v7.2, 0_Návod).
 6. Globální výběr NP, AI principů a KRAUU; návrh 4–8 vzorů a antipatternů pro agenta.
 7. Sekci 14 Zdrojové soubory: soubory ke kurzu s formátem (md, docx), rolí (Obsah / Pravidla pro tvorbu / Hotový kurz), moduly, pro které platí, a stavem ověření; co ve zdrojích chybí (nutno dohledat). Rozpory mezi zdroji zapiš do tabulky „Známé rozpory ve zdrojích“ a nech je rozhodnout autora.
+
+8. Návrh grafiky (sekce 10) podle `references/grafika.md`, oddíly 1–3: 1–2 obrázky na modul. Návrh vypiš do chatu jako samostatnou tabulku, aby s ním uživatelka mohla hned pracovat.
 
 Ukonči otázkou, co autor mění. Nepokračuj bez souhlasu. Přepracování kostry je levné, přepracování modulů drahé.
 
@@ -61,6 +66,8 @@ Každý modul má alespoň jednu otevřenou nebo reflexivní položku. Klíčov�
 Po posledním modulu vygeneruj capstone (varianta A nebo B podle rozhodnutí autora), sekci 9 ARTEFAKT s šablonou sekcí, 11 RUBRIKU 5 × 5 se závaznými názvy úrovní, váhami a routingem, 12 výzkumnou poznámku, závěrečný test (8–12 položek, práh 75 %), pravidla používání AI pro účastníky a ZDROJE s datem ověření. Preprinty označ. U tvrzení oslabených replikacemi přidej poznámku.
 
 ## Krok 4: předání
+
+Po kontrole věrnosti a korektuře textu vykresli grafiku podle `references/grafika.md`, oddíly 4–6 (podsložka `grafika`, skript ze `grafika_zaklad.py`, kontrola každého obrázku) a pošli ji uživatelce do chatu.
 
 Ulož celý kurz jako `<KOD>_<Nazev>_KURZ.md` do složky kurzu (konvence v kánonu, sekce 9). Když je jako Project folder otevřená přímo složka kurzu, ukládej do ní; když je otevřená `09_Kurzy`, použij nebo založ podsložku `<Kód><NázevBezMezer>`. Uvnitř už otevřené složky kurzu nikdy nezakládej další `09_Kurzy/`.
 
