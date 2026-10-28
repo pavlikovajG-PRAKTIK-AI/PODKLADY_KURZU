@@ -211,7 +211,7 @@ Uživatel vytvoří **Název sekce**: co přesně, v jakém rozsahu, s jakým zd
 
 ## 10 MEDIÁLNÍ PŘÍLOHY
 
-*Obrázky se na platformu vkládají ručně, proto má každá příloha přesný název a pozici. Název: `<KOD>-M<n>-<NN>-<typ>-<popis>.<ext>`, kde `<NN>` je pořadí přílohy v modulu podle výskytu v textu (01, 02 …); capstone `CAP`, úvod kurzu `M0`. Pořadí `<NN>` upřesňuje název podle Matrice v7.2 (list 10), která ho zatím neuvádí. Formáty PNG, SVG, MP3. V textu F1 stojí na místě obrázku řádek `> 🖼 **<název souboru>** — popis` s alt textem.*
+*Obrázky se na platformu vkládají ručně, proto má každá příloha přesný název a pozici. Název: `<KOD>-M<n>-<NN>-<typ>-<popis>.<ext>`, kde `<NN>` je pořadí přílohy v modulu podle výskytu v textu (01, 02 …); capstone `CAP`, úvod kurzu `M0`. Pořadí `<NN>` upřesňuje název podle Matrice v7.2 (list 10), která ho zatím neuvádí. Formáty PNG, SVG, MP3. V textu stojí na místě obrázku samostatný řádek `![alt text](<název souboru>)` (standard Markdownu, kánon oddíl 9); tabulka je záloha pro ruční vkládání.*
 
 | Název souboru | Typ | Modul | Pozice (fáze a nadpis oddílu, za který obrázek patří) | Alt text / popis | Zdroj / licence | Schválil |
 |---|---|---|---|---|---|---|

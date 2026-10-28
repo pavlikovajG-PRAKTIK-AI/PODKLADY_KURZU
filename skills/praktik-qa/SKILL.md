@@ -70,7 +70,7 @@ Projdi 9 bodů DoD. U bodů, které nelze ověřit z textu (oponentura, zápis v
 - **Odkazy na kurzy autorů** (KAJ/7033, KAJ/7135, jiné předměty v Moodlu) ve finálním podkladu = FAIL; obsah ano, odkaz ne (pokyn J. Pavlíkové, 18. 10. 2026).
 - Pravidla používání AI pro účastníky existují (co smí, co ne, jak deklarovat). Dedikace TQ23000092 přítomna.
 - Přístupnost: každá zmíněná grafika má popis nebo alt text; kurz je průchozí bez zvuku a videa.
-- **Mediální přílohy:** každá má název s pořadím v modulu (`<KOD>-M<n>-<NN>-…`, kánon oddíl 9) a v sekci 10 přesnou pozici (modul, fáze, nadpis oddílu). Obrázky se na platformu vkládají ručně; chybějící pořadí nebo pozice = WARN. Formáty pro platformu PNG, SVG, MP3; MP4 uvedené jako příloha pro platformu = WARN (video jen mimo platformu).
+- **Mediální přílohy:** každá má název s pořadím v modulu (`<KOD>-M<n>-<NN>-…`, kánon oddíl 9) a v sekci 10 přesnou pozici (modul, fáze, nadpis oddílu). Obrázky se na platformu vkládají ručně; chybějící pořadí nebo pozice = WARN. Každý obrázek ze sekce 10 má v textu značku `![alt text](<název souboru>)` na místě, kde se zobrazí (kánon oddíl 9); chybějící značka, jiný název souboru než v sekci 10 nebo starý zápis `> 🖼` = WARN. Formáty pro platformu PNG, SVG, MP3; MP4 uvedené jako příloha pro platformu = WARN (video jen mimo platformu).
 
 ## P Předpisy (normativní texty)
 
